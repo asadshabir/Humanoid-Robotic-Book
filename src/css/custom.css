@@ -1,0 +1,708 @@
+/**
+ * Professional CSS color system for Physical AI & Humanoid Robotics Book
+ * Academic and technical color palette with accessibility compliance
+ */
+
+/* Professional academic color system */
+:root {
+  /* Primary colors - Professional blue for main branding */
+  --ifm-color-primary: #2d7de0;          /* #2d7de0 - Professional blue */
+  --ifm-color-primary-dark: #1e64c4;     /* Darker blue */
+  --ifm-color-primary-darker: #154da6;   /* Even darker blue */
+  --ifm-color-primary-darkest: #12356b;  /* Darkest blue */
+  --ifm-color-primary-light: #4898ec;    /* Lighter blue */
+  --ifm-color-primary-lighter: #74b5f7;  /* Even lighter blue */
+  --ifm-color-primary-lightest: #d0e4ff; /* Lightest blue */
+
+  /* Secondary colors - Support elements */
+  --ifm-color-secondary-50: #f0f9ff;     /* Lightest secondary */
+  --ifm-color-secondary-100: #e0f2fe;
+  --ifm-color-secondary-200: #bae6fd;
+  --ifm-color-secondary-300: #7dd3fc;
+  --ifm-color-secondary-400: #38bdf8;
+  --ifm-color-secondary-500: #0ea5e9;    /* Main secondary */
+  --ifm-color-secondary-600: #0284c0;
+  --ifm-color-secondary-700: #0369a1;
+  --ifm-color-secondary-800: #075985;
+  --ifm-color-secondary-900: #0c4a6e;    /* Darkest secondary */
+
+  /* Neutral colors - Backgrounds and text */
+  --ifm-color-neutral-50: #fafafa;       /* Lightest neutral */
+  --ifm-color-neutral-100: #f5f5f5;
+  --ifm-color-neutral-200: #e5e5e5;
+  --ifm-color-neutral-300: #d4d4d4;
+  --ifm-color-neutral-400: #a3a3a3;
+  --ifm-color-neutral-500: #737373;
+  --ifm-color-neutral-600: #525252;
+  --ifm-color-neutral-700: #404040;
+  --ifm-color-neutral-800: #262626;
+  --ifm-color-neutral-900: #171717;      /* Darkest neutral */
+  --ifm-color-neutral-950: #0a0a0a;
+
+  /* Status colors */
+  --ifm-color-success: #22c55e;          /* Success and positive feedback */
+  --ifm-color-success-dark: #16a34a;
+  --ifm-color-success-darker: #15803d;
+  --ifm-color-success-darkest: #14532d;
+  --ifm-color-success-light: #4ade80;
+  --ifm-color-success-lighter: #86efac;
+  --ifm-color-success-lightest: #dcfce7;
+
+  --ifm-color-warning: #f59e0b;          /* Warnings and caution */
+  --ifm-color-warning-dark: #d97706;
+  --ifm-color-warning-darker: #b45309;
+  --ifm-color-warning-darkest: #92400e;
+  --ifm-color-warning-light: #fbbf24;
+  --ifm-color-warning-lighter: #fcd34d;
+  --ifm-color-warning-lightest: #fef3c7;
+
+  --ifm-color-error: #ef4444;            /* Errors and negative feedback */
+  --ifm-color-error-dark: #dc2626;
+  --ifm-color-error-darker: #b91c1c;
+  --ifm-color-error-darkest: #7f1d1d;
+  --ifm-color-error-light: #f87171;
+  --ifm-color-error-lighter: #fca5a5;
+  --ifm-color-error-lightest: #fee2e2;
+
+  /* Technical colors - specific to robotics content */
+  --ifm-color-technical-ai: #1e40af;     /* Deep blue for AI content */
+  --ifm-color-technical-robotics: #065f46; /* Deep green for robotics */
+  --ifm-color-technical-neural: #7e22ce; /* Purple for neural networks */
+  --ifm-color-technical-hardware: #c2410c; /* Orange for hardware */
+  --ifm-color-technical-simulation: #0891b2; /* Cyan for simulation */
+
+  /* Premium Landing Page Colors */
+  --ifm-color-landing-bg-start: #0B0F14;
+  --ifm-color-landing-bg-end: #121821;
+  --ifm-color-landing-accent: #22D3EE; /* Cyan accent */
+  --ifm-color-landing-heading: #E5E7EB;
+  --ifm-color-landing-body: #9CA3AF;
+  --ifm-color-landing-card-bg: #1E293B;
+  --ifm-color-landing-section-bg: #0F172A;
+
+  /* UI elements */
+  --ifm-color-background: #fafafa;       /* Light background */
+  --ifm-color-surface: #ffffff;          /* Surface elements */
+  --ifm-color-text: #171717;             /* Main text */
+  --ifm-color-text-secondary: #525252;   /* Secondary text */
+  --ifm-color-text-tertiary: #737373;    /* Tertiary text */
+  --ifm-color-border: #e5e5e5;           /* Border color */
+
+  /* Code and syntax highlighting */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Typography scale - using major second modular scale (1.200) */
+  --ifm-font-size-xs: 0.833rem;        /* 10px */
+  --ifm-font-size-sm: 0.833rem;        /* 10px */
+  --ifm-font-size-base: 1rem;          /* 12px - Base size */
+  --ifm-font-size-lg: 1.2rem;          /* 14.4px */
+  --ifm-font-size-xl: 1.44rem;         /* 17.3px */
+  --ifm-font-size-2xl: 1.728rem;       /* 20.7px */
+  --ifm-font-size-3xl: 2.074rem;       /* 24.9px */
+  --ifm-font-size-4xl: 2.488rem;       /* 29.9px */
+  --ifm-font-size-5xl: 2.986rem;       /* 35.8px */
+  --ifm-font-size-6xl: 3.583rem;       /* 43px */
+
+  /* Line height scale */
+  --ifm-line-height-tight: 1.25;
+  --ifm-line-height-snug: 1.375;
+  --ifm-line-height-normal: 1.5;
+  --ifm-line-height-relaxed: 1.625;
+  --ifm-line-height-loose: 1.75;
+
+  /* Letter spacing */
+  --ifm-letter-spacing-tight: -0.025em;
+  --ifm-letter-spacing-normal: 0;
+  --ifm-letter-spacing-wide: 0.025em;
+
+  /* Font families */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-font-family-heading: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', 'Consolas', 'Monaco', 'Lucida Console', monospace;
+
+  /* Font weights */
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-medium: 500;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-bold: 700;
+
+  /* Accessibility enhancements */
+  --ifm-color-contrast-high-text: #0a0a0a;
+  --ifm-color-contrast-high-bg: #fafafa;
+  --ifm-color-contrast-normal-text: #171717;
+  --ifm-color-contrast-normal-bg: #fafafa;
+  --ifm-color-contrast-low-text: #525252;
+  --ifm-color-contrast-low-bg: #f5f5f5;
+}
+
+/* Dark mode - optimized for readability and reduced eye strain */
+[data-theme='dark'] {
+  /* Primary colors in dark mode */
+  --ifm-color-primary: #4898ec;          /* Lighter blue for dark mode */
+  --ifm-color-primary-dark: #2d7de0;
+  --ifm-color-primary-darker: #1e64c4;
+  --ifm-color-primary-darkest: #154da6;
+  --ifm-color-primary-light: #74b5f7;
+  --ifm-color-primary-lighter: #a5cfff;
+  --ifm-color-primary-lightest: #d0e4ff;
+
+  /* Secondary colors in dark mode */
+  --ifm-color-secondary-50: #0c4a6e;
+  --ifm-color-secondary-100: #075985;
+  --ifm-color-secondary-200: #0369a1;
+  --ifm-color-secondary-300: #0284c0;
+  --ifm-color-secondary-400: #0ea5e9;
+  --ifm-color-secondary-500: #38bdf8;
+  --ifm-color-secondary-600: #7dd3fc;
+  --ifm-color-secondary-700: #bae6fd;
+  --ifm-color-secondary-800: #e0f2fe;
+  --ifm-color-secondary-900: #f0f9ff;
+
+  /* Neutral colors in dark mode */
+  --ifm-color-neutral-50: #0a0a0a;
+  --ifm-color-neutral-100: #171717;
+  --ifm-color-neutral-200: #262626;
+  --ifm-color-neutral-300: #404040;
+  --ifm-color-neutral-400: #525252;
+  --ifm-color-neutral-500: #737373;
+  --ifm-color-neutral-600: #a3a3a3;
+  --ifm-color-neutral-700: #d4d4d4;
+  --ifm-color-neutral-800: #e5e5e5;
+  --ifm-color-neutral-900: #f5f5f5;
+  --ifm-color-neutral-950: #fafafa;
+
+  /* Status colors in dark mode */
+  --ifm-color-success: #4ade80;
+  --ifm-color-success-dark: #22c55e;
+  --ifm-color-success-darker: #16a34a;
+  --ifm-color-success-darkest: #15803d;
+  --ifm-color-success-light: #86efac;
+  --ifm-color-success-lighter: #bbf7d0;
+  --ifm-color-success-lightest: #dcfce7;
+
+  --ifm-color-warning: #fbbf24;
+  --ifm-color-warning-dark: #f59e0b;
+  --ifm-color-warning-darker: #d97706;
+  --ifm-color-warning-darkest: #b45309;
+  --ifm-color-warning-light: #fcd34d;
+  --ifm-color-warning-lighter: #fef3c7;
+  --ifm-color-warning-lightest: #fffbeb;
+
+  --ifm-color-error: #f87171;
+  --ifm-color-error-dark: #ef4444;
+  --ifm-color-error-darker: #dc2626;
+  --ifm-color-error-darkest: #b91c1c;
+  --ifm-color-error-light: #fca5a5;
+  --ifm-color-error-lighter: #fecaca;
+  --ifm-color-error-lightest: #fef2f2;
+
+  /* Technical colors in dark mode */
+  --ifm-color-technical-ai: #3b82f6;
+  --ifm-color-technical-robotics: #10b981;
+  --ifm-color-technical-neural: #a855f7;
+  --ifm-color-technical-hardware: #f97316;
+  --ifm-color-technical-simulation: #06b6d4;
+
+  /* UI elements in dark mode */
+  --ifm-color-background: #0a0a0a;
+  --ifm-color-surface: #171717;
+  --ifm-color-text: #f5f5f5;
+  --ifm-color-text-secondary: #d4d4d4;
+  --ifm-color-text-tertiary: #a3a3a3;
+  --ifm-color-border: #262626;
+
+  /* Code and syntax highlighting in dark mode */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Premium Animated UI - CSS Animations */
+:root {
+  --ifm-animation-duration-fast: 0.2s;
+  --ifm-animation-duration-normal: 0.3s;
+  --ifm-animation-duration-slow: 0.5s;
+  --ifm-animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --ifm-animation-delay: 0.1s;
+  --ifm-animation-fade-in-distance: 20px;
+  --ifm-animation-slide-in-distance: 30px;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(var(--ifm-animation-fade-in-distance));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--ifm-animation-fade-in-distance)));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Left Animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-1 * var(--ifm-animation-slide-in-distance))) translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* Slide In Right Animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(var(--ifm-animation-slide-in-distance)) translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 rgba(34, 211, 238, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(34, 211, 238, 0);
+  }
+}
+
+/* Scale Animation */
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Float Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Animation classes */
+.animated {
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: var(--ifm-animation-duration-normal);
+  animation-timing-function: var(--ifm-animation-easing);
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+  animation-duration: var(--ifm-animation-duration-normal);
+  animation-timing-function: var(--ifm-animation-easing);
+}
+
+.fade-in-down {
+  animation-name: fadeInDown;
+  animation-duration: var(--ifm-animation-duration-normal);
+  animation-timing-function: var(--ifm-animation-easing);
+}
+
+.slide-in-left {
+  animation-name: slideInLeft;
+  animation-duration: var(--ifm-animation-duration-normal);
+  animation-timing-function: var(--ifm-animation-easing);
+}
+
+.slide-in-right {
+  animation-name: slideInRight;
+  animation-duration: var(--ifm-animation-duration-normal);
+  animation-timing-function: var(--ifm-animation-easing);
+}
+
+.glow {
+  animation-name: glow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.scale {
+  animation-name: scale;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.float {
+  animation-name: float;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Hover animations */
+.hover-scale {
+  transition: transform var(--ifm-animation-duration-fast) var(--ifm-animation-easing);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: box-shadow var(--ifm-animation-duration-fast) var(--ifm-animation-easing);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+/* Animation delays for staggered effects */
+.delay-1 {
+  animation-delay: calc(var(--ifm-animation-delay) * 1);
+}
+
+.delay-2 {
+  animation-delay: calc(var(--ifm-animation-delay) * 2);
+}
+
+.delay-3 {
+  animation-delay: calc(var(--ifm-animation-delay) * 3);
+}
+
+.delay-4 {
+  animation-delay: calc(var(--ifm-animation-delay) * 4);
+}
+
+.delay-5 {
+  animation-delay: calc(var(--ifm-animation-delay) * 5);
+}
+
+/* Respect user's reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animated,
+  .fade-in,
+  .fade-in-up,
+  .fade-in-down,
+  .slide-in-left,
+  .slide-in-right,
+  .glow,
+  .scale,
+  .float,
+  .hover-scale,
+  .hover-glow {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Reset any transforms */
+  .hover-scale:hover {
+    transform: none;
+  }
+
+  .hover-glow:hover {
+    box-shadow: none;
+  }
+}
+
+/* Additional academic styling for content */
+.admonition {
+  border-left-width: 4px;
+}
+
+.admonition--success {
+  border-left-color: var(--ifm-color-success);
+}
+
+.admonition--warning {
+  border-left-color: var(--ifm-color-warning);
+}
+
+.admonition--error {
+  border-left-color: var(--ifm-color-error);
+}
+
+/* Technical content styling */
+.technical-ai {
+  color: var(--ifm-color-technical-ai);
+}
+
+.technical-robotics {
+  color: var(--ifm-color-technical-robotics);
+}
+
+.technical-neural {
+  color: var(--ifm-color-technical-neural);
+}
+
+.technical-hardware {
+  color: var(--ifm-color-technical-hardware);
+}
+
+.technical-simulation {
+  color: var(--ifm-color-technical-simulation);
+}
+
+/* Responsive layout styles */
+.custom-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem 0;
+  margin-top: var(--ifm-navbar-height, 0);
+}
+
+.content-wrapper {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-title {
+  color: var(--ifm-color-text);
+  margin-bottom: 1rem;
+}
+
+.page-description {
+  color: var(--ifm-color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--ifm-color-surface);
+  color: var(--ifm-color-text);
+  padding: 2rem 0 1rem;
+  margin-top: auto;
+}
+
+.footer__section {
+  margin-bottom: 1.5rem;
+}
+
+.footer__title {
+  color: var(--ifm-color-text);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__item {
+  margin-bottom: 0.5rem;
+}
+
+.footer__link {
+  color: var(--ifm-color-text-secondary);
+  text-decoration: none;
+  transition: color var(--ifm-transition-fast) var(--ifm-easing);
+}
+
+.footer__link:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--ifm-color-border);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer__copyright {
+  color: var(--ifm-color-text-tertiary);
+  font-size: 0.875rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (min-width: 997px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer__section {
+    margin-bottom: 0;
+  }
+
+  .footer__bottom--container {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 996px) {
+  .footer__section {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 0 0.75rem;
+  }
+
+  .main-content {
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 0 0.5rem;
+  }
+
+  .footer__title {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile menu styles */
+.navbar__sidebar {
+  display: none;
+}
+
+@media (max-width: 996px) {
+  .navbar__sidebar {
+    display: block;
+    position: absolute;
+    top: var(--ifm-navbar-height);
+    left: 0;
+    right: 0;
+    background-color: var(--ifm-color-surface);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 100;
+  }
+
+  .navbar__sidebar__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar__items--right:not(.mobile-only) {
+    display: none;
+  }
+}
+
+/* Theme toggle button styling */
+.theme-toggle-button {
+  background: none;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--ifm-color-text);
+  transition: all var(--ifm-transition-fast) var(--ifm-easing);
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary);
+}
+
+/* Accessibility enhancements */
+@media (prefers-contrast: high) {
+  :root {
+    --ifm-color-text: var(--ifm-color-contrast-high-text);
+    --ifm-color-background: var(--ifm-color-contrast-high-bg);
+    --ifm-color-border: var(--ifm-color-neutral-900);
+  }
+}
+
+/* Focus indicators for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Typography utility classes */
+.text-xs { font-size: var(--ifm-font-size-xs); }
+.text-sm { font-size: var(--ifm-font-size-sm); }
+.text-base { font-size: var(--ifm-font-size-base); }
+.text-lg { font-size: var(--ifm-font-size-lg); }
+.text-xl { font-size: var(--ifm-font-size-xl); }
+.text-2xl { font-size: var(--ifm-font-size-2xl); }
+.text-3xl { font-size: var(--ifm-font-size-3xl); }
+.text-4xl { font-size: var(--ifm-font-size-4xl); }
+.text-5xl { font-size: var(--ifm-font-size-5xl); }
+.text-6xl { font-size: var(--ifm-font-size-6xl); }
+
+/* Line height utilities */
+.leading-tight { line-height: var(--ifm-line-height-tight); }
+.leading-snug { line-height: var(--ifm-line-height-snug); }
+.leading-normal { line-height: var(--ifm-line-height-normal); }
+.leading-relaxed { line-height: var(--ifm-line-height-relaxed); }
+.leading-loose { line-height: var(--ifm-line-height-loose); }
+
+/* Font weight utilities */
+.font-normal { font-weight: var(--ifm-font-weight-normal); }
+.font-medium { font-weight: var(--ifm-font-weight-medium); }
+.font-semibold { font-weight: var(--ifm-font-weight-semibold); }
+.font-bold { font-weight: var(--ifm-font-weight-bold); }
+
+/* Letter spacing utilities */
+.tracking-tight { letter-spacing: var(--ifm-letter-spacing-tight); }
+.tracking-normal { letter-spacing: var(--ifm-letter-spacing-normal); }
+.tracking-wide { letter-spacing: var(--ifm-letter-spacing-wide); }
+
+/* Font family utilities */
+.font-family-base { font-family: var(--ifm-font-family-base); }
+.font-family-heading { font-family: var(--ifm-font-family-heading); }
+.font-family-monospace { font-family: var(--ifm-font-family-monospace); }

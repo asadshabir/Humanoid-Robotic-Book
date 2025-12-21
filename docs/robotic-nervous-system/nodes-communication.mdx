@@ -1,0 +1,75 @@
+---
+sidebar_label: 'Nodes and Communication'
+sidebar_position: 3
+---
+
+# Nodes and Communication
+
+## Overview
+
+This chapter explores the fundamental building blocks of ROS 2: nodes and the communication mechanisms that allow them to interact.
+
+## Learning Objectives
+
+After completing this chapter, you will be able to:
+- Create and run ROS 2 nodes
+- Implement topic-based communication
+- Use services for request/response patterns
+- Understand the publisher-subscriber model
+
+## Table of Contents
+- [Understanding Nodes](#understanding-nodes)
+- [Publisher-Subscriber Pattern](#publisher-subscriber-pattern)
+- [Services](#services)
+- [Creating Nodes in Python and C++](#creating-nodes-in-python-and-c)
+- [Communication Best Practices](#communication-best-practices)
+
+## Understanding Nodes
+
+A node is an executable that uses ROS 2 to communicate with other nodes. Nodes are the fundamental building blocks of a ROS 2 system.
+
+```python
+# Example of a minimal ROS 2 node in Python
+import rclpy
+from rclpy.node import Node
+
+class MinimalPublisher(Node):
+    def __init__(self):
+        super().__init__('minimal_publisher')
+        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        timer_period = 0.5  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.i = 0
+
+    def timer_callback(self):
+        msg = String()
+        msg.data = 'Hello World: %d' % self.i
+        self.publisher_.publish(msg)
+        self.get_logger().info('Publishing: "%s"' % msg.data)
+        self.i += 1
+```
+
+## Publisher-Subscriber Pattern
+
+The publisher-subscriber pattern is the primary communication method in ROS 2. Publishers send messages to topics, and subscribers receive messages from topics.
+
+## Services
+
+Services provide a request-response communication pattern, which is synchronous and allows for direct interaction between nodes.
+
+## Creating Nodes in Python and C++
+
+Both Python and C++ are supported for creating ROS 2 nodes, with similar APIs for node creation and communication.
+
+## Communication Best Practices
+
+Effective communication in ROS 2 involves understanding message types, QoS policies, and system architecture.
+
+## Summary
+
+This chapter covered the core communication patterns in ROS 2. The next chapter will explore services and actions in greater detail.
+
+## Validation Hooks
+- [ ] Verify code examples are correct and functional
+- [ ] Confirm QoS settings are explained properly
+- [ ] Ensure all communication patterns are demonstrated

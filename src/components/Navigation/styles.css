@@ -1,0 +1,218 @@
+/**
+ * Navigation Components Styles
+ * Consistent navigation across all modules
+ */
+
+/* Chapter Navigation (Previous/Next buttons) */
+.chapter-navigation {
+  margin: 2rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 1.5rem 0;
+}
+
+.chapter-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chapter-navigation-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: var(--ifm-global-radius);
+  transition: background-color var(--ifm-transition-fast) var(--ifm-easing);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.chapter-navigation-link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.chapter-navigation-link--previous {
+  text-align: left;
+  flex-direction: row;
+}
+
+.chapter-navigation-link--next {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+.chapter-navigation-info {
+  flex: 1;
+}
+
+.chapter-navigation-direction {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.chapter-navigation-title {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.chapter-navigation-link:hover .chapter-navigation-title {
+  color: var(--ifm-color-primary);
+}
+
+.chapter-navigation-arrow {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  margin: 0 0.5rem;
+}
+
+.chapter-navigation-placeholder {
+  flex: 1;
+}
+
+/* Module Sidebar */
+.module-sidebar {
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: var(--ifm-global-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.module-sidebar-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.module-sidebar-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--ifm-color-primary);
+}
+
+.module-sidebar-nav {
+  margin: 0;
+}
+
+.module-sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.module-sidebar-item {
+  margin: 0.25rem 0;
+}
+
+.module-sidebar-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-color-emphasis-800);
+  transition: all var(--ifm-transition-fast) var(--ifm-easing);
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.module-sidebar-link:hover {
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.module-sidebar-link--active {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.module-sidebar-active-marker {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  content: '';
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .chapter-navigation-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .chapter-navigation-link--previous,
+  .chapter-navigation-link--next {
+    flex-direction: row;
+  }
+
+  .chapter-navigation-link--next {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .chapter-navigation {
+    padding: 1rem 0;
+  }
+
+  .chapter-navigation-link {
+    padding: 0.75rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .chapter-navigation {
+  border-top-color: var(--ifm-color-emphasis-800);
+  border-bottom-color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .chapter-navigation-link {
+  border-color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .chapter-navigation-link:hover {
+  background-color: var(--ifm-color-emphasis-800);
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme='dark'] .chapter-navigation-title {
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .chapter-navigation-link:hover .chapter-navigation-title {
+  color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme='dark'] .module-sidebar {
+  background-color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .module-sidebar-header {
+  border-bottom-color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .module-sidebar-link {
+  color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .module-sidebar-link:hover {
+  background-color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme='dark'] .module-sidebar-link--active {
+  background-color: var(--ifm-color-primary-darkest);
+  color: var(--ifm-color-primary-lighter);
+}

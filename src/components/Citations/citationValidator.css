@@ -1,0 +1,347 @@
+.citation-validator-container {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background-color: var(--ifm-color-emphasis-0);
+  border-radius: var(--ifm-global-radius);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.citation-validator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+}
+
+.citation-validator-header h3 {
+  margin: 0;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.validation-summary {
+  text-align: right;
+}
+
+.validation-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--ifm-global-radius);
+  font-weight: bold;
+}
+
+.validation-status.valid {
+  background-color: var(--ifm-color-success-lighter);
+  color: var(--ifm-color-success-dark);
+}
+
+.validation-status.invalid {
+  background-color: var(--ifm-color-danger-lighter);
+  color: var(--ifm-color-danger-dark);
+}
+
+.citation-validator-controls {
+  margin-bottom: 1.5rem;
+}
+
+.add-citation-btn {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--ifm-global-radius);
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.add-citation-btn:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.validation-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.5rem;
+}
+
+.validation-tabs button {
+  background: none;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-bottom: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--ifm-global-radius) var(--ifm-global-radius) 0 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.validation-tabs button.active {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+.citation-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.citation-entry {
+  padding: 1rem;
+  background-color: white;
+  border-radius: var(--ifm-global-radius);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.citation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+}
+
+.citation-header h4 {
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.remove-citation-btn {
+  background: var(--ifm-color-danger);
+  color: white;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-citation-btn:hover {
+  background: var(--ifm-color-danger-dark);
+}
+
+.citation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row > label {
+  flex: 1;
+  min-width: 150px;
+}
+
+.citation-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.citation-form input,
+.citation-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  font-size: 0.9rem;
+}
+
+.citation-form input:focus,
+.citation-form select:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lighter);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-header h5 {
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.add-author-btn {
+  background-color: var(--ifm-color-secondary);
+  color: var(--ifm-color-emphasis-900);
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--ifm-global-radius);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.add-author-btn:hover {
+  background-color: var(--ifm-color-secondary-dark);
+}
+
+.author-entry {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-100);
+}
+
+.author-entry label {
+  flex: 1;
+  min-width: 120px;
+}
+
+.validation-result {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+.validation-result.valid {
+  background-color: var(--ifm-color-success-lighter);
+  border: 1px solid var(--ifm-color-success);
+}
+
+.validation-result.invalid {
+  background-color: var(--ifm-color-danger-lighter);
+  border: 1px solid var(--ifm-color-danger);
+}
+
+.validation-success {
+  color: var(--ifm-color-success-dark);
+  font-weight: 500;
+}
+
+.validation-errors {
+  color: var(--ifm-color-danger-dark);
+}
+
+.validation-error-count {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.validation-error-item {
+  margin: 0.25rem 0;
+}
+
+.apa-format-preview {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: var(--ifm-global-radius);
+  border-left: 3px solid var(--ifm-color-info);
+}
+
+.apa-format-preview h5 {
+  margin-top: 0;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.apa-citation {
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.overall-validation-errors {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--ifm-color-danger-lighter);
+  border-radius: var(--ifm-global-radius);
+  border-left: 3px solid var(--ifm-color-danger);
+}
+
+.overall-validation-errors h4 {
+  margin-top: 0;
+  color: var(--ifm-color-danger-dark);
+}
+
+.overall-error-item {
+  margin: 0.25rem 0;
+  color: var(--ifm-color-danger-darker);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .citation-validator-container {
+  background-color: var(--ifm-color-emphasis-900);
+  border-color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .citation-validator-header {
+  border-bottom-color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .citation-entry {
+  background-color: var(--ifm-color-emphasis-800);
+  border-color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .citation-header {
+  border-bottom-color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .validation-tabs {
+  border-bottom-color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .validation-tabs button {
+  border-color: var(--ifm-color-emphasis-600);
+  background-color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .validation-tabs button.active {
+  background-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .apa-format-preview {
+  background-color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .overall-validation-errors {
+  background-color: var(--ifm-color-danger-darkest);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .citation-validator-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .author-entry {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .validation-tabs {
+    flex-wrap: wrap;
+  }
+
+  .validation-tabs button {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+}

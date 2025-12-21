@@ -1,0 +1,118 @@
+/**
+ * Animation styles for Physical AI & Humanoid Robotics Book
+ * Following non-blocking animation policy with progressive enhancement
+ */
+
+/* Base animation styles */
+.animated-section {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animated-section.animated-section--visible {
+  opacity: 1;
+}
+
+/* Fade animation */
+.animated-section.animated-section--fade {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animated-section.animated-section--fade.animated-section--visible {
+  opacity: 1;
+}
+
+/* Slide animations */
+.animated-section.animated-section--slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-section.animated-section--slide-down {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-section.animated-section--slide-left {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-section.animated-section--slide-right {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-section.animated-section--slide-up.animated-section--visible,
+.animated-section.animated-section--slide-down.animated-section--visible,
+.animated-section.animated-section--slide-left.animated-section--visible,
+.animated-section.animated-section--slide-right.animated-section--visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* Scale animation */
+.animated-section.animated-section--scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.animated-section.animated-section--scale.animated-section--visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animation policy: respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animated-section {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Ensure content is visible even when animations are disabled */
+  .animated-section:not(.animated-section--visible) {
+    opacity: 1;
+  }
+}
+
+/* Performance consideration: disable animations on low-performance devices */
+@supports (not (prefers-reduced-motion: no-preference)) {
+  .animated-section {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Ensure content is always accessible regardless of animation state */
+.animated-section[aria-hidden="false"] {
+  visibility: visible;
+}
+
+/* Animation container that can be disabled globally */
+.animation-enabled .animated-section {
+  opacity: 0;
+}
+
+.animation-disabled .animated-section,
+.animation-disabled .animated-section.animated-section--visible {
+  opacity: 1;
+  transition: none;
+  transform: none;
+}
+
+/* Animation loading states */
+.animated-section--loading {
+  opacity: 0.7;
+}
+
+/* Animation completion states */
+.animated-section--completed {
+  opacity: 1;
+}

@@ -1,0 +1,183 @@
+openapi: 3.0.0
+info:
+  title: Physical AI & Humanoid Robotics Book Content API
+  description: API for accessing book content and related resources
+  version: 1.0.0
+servers:
+  - url: https://physical-ai-book.example.com/api/v1
+    description: Production server
+  - url: https://staging.physical-ai-book.example.com/api/v1
+    description: Staging server
+
+paths:
+  /modules:
+    get:
+      summary: Get all book modules
+      description: Retrieve a list of all modules in the book
+      responses:
+        '200':
+          description: List of modules
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Module'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /modules/{moduleId}:
+    get:
+      summary: Get a specific module
+      description: Retrieve details about a specific module
+      parameters:
+        - name: moduleId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the module to retrieve
+      responses:
+        '200':
+          description: Module details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Module'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /modules/{moduleId}/chapters:
+    get:
+      summary: Get chapters for a module
+      description: Retrieve all chapters for a specific module
+      parameters:
+        - name: moduleId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the module
+      responses:
+        '200':
+          description: List of chapters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Chapter'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /chapters/{chapterId}:
+    get:
+      summary: Get a specific chapter
+      description: Retrieve content and metadata for a specific chapter
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the chapter to retrieve
+      responses:
+        '200':
+          description: Chapter details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chapter'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  schemas:
+    Module:
+      type: object
+      required:
+        - id
+        - title
+        - description
+        - order
+        - chapters
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the module
+        title:
+          type: string
+          description: Title of the module
+        description:
+          type: string
+          description: Brief description of the module
+        order:
+          type: integer
+          description: Sequential order of the module (1-4)
+        chapters:
+          type: array
+          items:
+            $ref: '#/components/schemas/Chapter'
+        dependencies:
+          type: array
+          items:
+            type: string
+          description: IDs of modules that must be completed before this one
+        reproducibility_artifacts:
+          type: array
+          items:
+            type: string
+          description: List of URDF, config, or other reproducibility files
+
+    Chapter:
+      type: object
+      required:
+        - id
+        - title
+        - module_id
+        - order
+        - content_path
+        - objectives
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the chapter
+        title:
+          type: string
+          description: Title of the chapter
+        module_id:
+          type: string
+          description: ID of the parent module
+        order:
+          type: integer
+          description: Sequential order within the module
+        content_path:
+          type: string
+          description: Path to the MDX content file
+        objectives:
+          type: array
+          items:
+            type: string
+          description: Learning objectives for the chapter
+        artifacts:
+          type: array
+          items:
+            type: string
+          description: List of technical artifacts for this chapter
+        validation_hooks:
+          type: array
+          items:
+            type: string
+          description: How to validate this chapter's content
+
+  responses:
+    NotFound:
+      description: The specified resource was not found
+    InternalServerError:
+      description: An internal server error occurred

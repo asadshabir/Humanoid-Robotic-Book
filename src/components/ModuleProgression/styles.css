@@ -1,0 +1,210 @@
+/**
+ * Module Progression Indicator Styles
+ * Visual indicators showing progression order between modules
+ */
+
+.module-progression-container {
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: var(--ifm-global-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.module-progression-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.25rem;
+}
+
+.module-progression-description {
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.module-progression-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.module-progression-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: var(--ifm-global-radius);
+  background-color: var(--ifm-color-emphasis-0);
+  transition: background-color var(--ifm-transition-fast) var(--ifm-easing);
+}
+
+.module-progression-item:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.module-progression-item--current {
+  background-color: var(--ifm-color-primary-lightest);
+  border: 1px solid var(--ifm-color-primary-lighter);
+}
+
+.module-progression-item--completed {
+  background-color: var(--ifm-color-success-lightest);
+  border: 1px solid var(--ifm-color-success-lighter);
+}
+
+.module-progression-item--upcoming {
+  background-color: var(--ifm-color-emphasis-100);
+  opacity: 0.8;
+}
+
+.module-progression-item-header {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+}
+
+.module-progression-item-status {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.25rem;
+}
+
+.module-progression-status-completed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-success);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.module-progression-status-current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  font-size: 0.75rem;
+}
+
+.module-progression-status-pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-400);
+}
+
+.module-progression-item-info {
+  flex: 1;
+}
+
+.module-progression-item-position {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.module-progression-item-title {
+  display: block;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+.module-progression-item-title:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
+.module-progression-item-title--current {
+  color: var(--ifm-color-primary);
+}
+
+.module-progression-item-description {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.5rem;
+}
+
+.module-progression-item-next {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.module-progression-next-label {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--ifm-global-radius);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .module-progression-container {
+  background-color: var(--ifm-color-emphasis-900);
+  border-left-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .module-progression-item--current {
+  background-color: var(--ifm-color-primary-darkest);
+  border-color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .module-progression-item--completed {
+  background-color: var(--ifm-color-success-darkest);
+  border-color: var(--ifm-color-success-darker);
+}
+
+[data-theme='dark'] .module-progression-item--upcoming {
+  background-color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .module-progression-item:hover {
+  background-color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .module-progression-item-title {
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .module-progression-item-title--current {
+  color: var(--ifm-color-primary-lighter);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .module-progression-container {
+    padding: 1rem;
+  }
+
+  .module-progression-item-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .module-progression-item-status {
+    margin-top: 0;
+  }
+
+  .module-progression-item-next {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}

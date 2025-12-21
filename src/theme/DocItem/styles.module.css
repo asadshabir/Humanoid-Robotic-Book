@@ -1,0 +1,173 @@
+/* Custom DocItem styles with smooth transitions */
+.docItemWrapper {
+  min-height: 100vh;
+  padding: 2rem 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+}
+
+.docItemWrapper.pageExiting {
+  opacity: 0.7;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.docItemWrapper.pageEntering {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.docItemWrapper.pageEntered {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.docItemRow {
+  max-width: 100%;
+  margin: 0 auto;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.docItemCol {
+  max-width: 75% !important;
+}
+
+.docItemContainer {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.breadcrumbsContainer {
+  margin-bottom: 1.5rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.docItemBody {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.docItemFooter {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ifm-color-border);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tableOfContents {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+  align-self: flex-start;
+  height: calc(100vh - var(--ifm-navbar-height) - 2rem);
+  overflow-y: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Page transition animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation delays for staggered effects */
+.breadcrumbAnimation {
+  animation-delay: 0.15s;
+}
+
+.contentAnimation {
+  animation-delay: 0.2s;
+}
+
+.footerAnimation {
+  animation-delay: 0.25s;
+}
+
+.tocAnimation {
+  animation-delay: 0.3s;
+}
+
+/* Enhanced focus styles for accessibility */
+.docItemContainer:focus-within {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .docItemWrapper {
+    padding: 1rem 0;
+  }
+
+  .tableOfContents {
+    position: static;
+    height: auto;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .docItemRow {
+    flex-direction: column;
+  }
+
+  .docItemCol {
+    max-width: 100% !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .docItemWrapper,
+  .docItemContainer,
+  .breadcrumbsContainer,
+  .docItemBody,
+  .docItemFooter,
+  .tableOfContents {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .docItemWrapper.pageExiting,
+  .docItemWrapper.pageEntering,
+  .docItemWrapper.pageEntered {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .breadcrumbAnimation,
+  .contentAnimation,
+  .footerAnimation,
+  .tocAnimation {
+    animation: none !important;
+  }
+}
+
+/* Enhanced hover states for interactive elements */
+.docItemContainer a {
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.docItemContainer a:hover {
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
+}
+
+/* Smooth page navigation transitions */
+.docItemWrapper {
+  will-change: opacity, transform;
+}
+
+/* Performance optimization */
+@media (prefers-reduced-motion: no-preference) {
+  .docItemWrapper {
+    contain: layout style paint;
+  }
+}
