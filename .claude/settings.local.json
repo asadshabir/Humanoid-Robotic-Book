@@ -81,7 +81,28 @@
       "Bash(cat \"C:\\\\Users\\\\Asad Shabir\\\\specs\\\\005-typography-ui-enhancement\\\\spec.md\")",
       "Bash(find C:UsersAsad ShabirDesktopHumanoid-Robotic-Book -name \"*.css\" -exec grep -l \"font-size-base\\\\|font-family\\\\|typography\\\\|ifm-font\" {} ;)",
       "Bash(dir \"C:\\\\Users\\\\Asad Shabir\\\\Desktop\\\\Humanoid-Robotic-Book\\\\src\" /s)",
-      "Bash(findstr -i \"css\")"
+      "Bash(findstr -i \"css\")",
+      "Bash(findstr -E \"[0-9]+-book-content-expansion\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Number 9 -ShortName \"book-content-expansion\" -Description \"Expand the BOOK READING SECTION with deep, structured, technical content covering Physical AI & Humanoid Robotics from basic to advanced level.\")",
+      "Bash(dir \"C:\\\\Users\\\\Asad Shabir\\\\Desktop\\\\Humanoid-Robotic-Book\\\\specs\\\\009-book-content-expansion\" /B)",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\Asad Shabir\\\\Desktop\\\\Humanoid-Robotic-Book\\\\specs\\\\009-book-content-expansion'' -Recurse | ForEach-Object { $_Name }\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\Asad Shabir\\\\specs\\\\009-book-content-expansion'' -Recurse | ForEach-Object { $_Name }\")",
+      "Bash(dir \"specs\\\\009-book-content-expansion\\\\tasks.md\")",
+      "Bash(dir \"C:\\\\Users\\\\Asad Shabir\\\\Desktop\\\\Humanoid-Robotic-Book\\\\specs\\\\009-book-content-expansion\\\\checklists\" /B)",
+      "Bash(dir \"C:\\\\Users\\\\Asad Shabir\\\\specs\\\\009-book-content-expansion\" /B)",
+      "Bash(dir \"C:\\\\Users\\\\Asad Shabir\\\\Desktop\\\\Humanoid-Robotic-Book\\\\docs\" /B)",
+      "Bash(tree \"C:\\\\Users\\\\Asad Shabir\\\\Desktop\\\\Humanoid-Robotic-Book\\\\docs\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\Asad Shabir\\\\Desktop\\\\Humanoid-Robotic-Book\\\\docs'' -Recurse -Depth 1 | Select-Object FullName, PSIsContainer\")",
+      "Bash(npx docusaurus start --port 3001)",
+      "Bash(cmd /c \"type \"\"C:\\\\Users\\\\ASADSH~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Asad-Shabir-Desktop-Humanoid-Robotic-Book\\\\tasks\\\\bf741db.output\"\"\")",
+      "Bash(npx docusaurus serve)",
+      "Bash(npx docusaurus serve --port 3001)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3000)",
+      "Bash(npx docusaurus serve --port 4000)",
+      "Bash(cmd /c \"type \"\"C:\\\\Users\\\\ASADSH~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Asad-Shabir-Desktop-Humanoid-Robotic-Book\\\\tasks\\\\bd40824.output\"\"\")",
+      "Bash(npx docusaurus start --port 5000)",
+      "Bash(cmd /c \"type \"\"C:\\\\Users\\\\ASADSH~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Asad-Shabir-Desktop-Humanoid-Robotic-Book\\\\tasks\\\\bdf2ba8.output\"\"\")"
     ]
   }
 }

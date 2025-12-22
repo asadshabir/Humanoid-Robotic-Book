@@ -706,3 +706,24 @@ select:focus {
 .font-family-base { font-family: var(--ifm-font-family-base); }
 .font-family-heading { font-family: var(--ifm-font-family-heading); }
 .font-family-monospace { font-family: var(--ifm-font-family-monospace); }
+
+/* UI Refinements for Physical AI & Humanoid Robotics Book */
+
+/* Book cover image styling with drop shadow */
+.book-cover-image {
+  filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.3));
+}
+
+/* Author profile image styling - circular, full image, object-fit: cover */
+.author-profile-image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+/* Book avatar image styling */
+.book-avatar-image {
+  width: 40px;
+  height: 40px;
+}

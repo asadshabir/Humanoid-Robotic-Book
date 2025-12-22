@@ -22,7 +22,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <img
               src="/img/hero/robotics-book-logo.png"
               alt="Physical AI & Humanoid Robotics Logo"
-              className={styles.logoImage}
+              className={`${styles.logoImage} book-avatar-image`}
               loading="eager"
             />
           </div>
@@ -55,7 +55,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             src="/img/hero/landing-page-hero-image.png"
             alt="Physical AI & Humanoid Robotics Book Cover"
             loading="eager"
-            className="hover-scale"
+            className="hover-scale book-cover-image"
           />
         </div>
       </div>

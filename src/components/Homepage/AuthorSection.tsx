@@ -10,7 +10,7 @@ const AuthorSection: React.FC = () => {
           <img
             src="/img/hero/creator-profile.png"
             alt="Asad Shabir - Creator of Physical AI & Humanoid Robotics"
-            className={styles.authorImage}
+            className={`${styles.authorImage} author-profile-image`}
             loading="lazy"
           />
         </div>

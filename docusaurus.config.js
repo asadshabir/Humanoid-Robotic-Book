@@ -13,10 +13,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: "https://humanoid-robotic-book-01.vercel.app",
+  url: 'https://asadshabir.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
-  baseUrl: '/',
+  baseUrl: '/Humanoid-Robotic-Book/',
 
   // GitHub pages deployment config.
   organizationName: 'asadshabir', // Usually your GitHub org/user name.
@@ -44,10 +44,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/your-username/your-repo/edit/main/',
         },
         blog: false, // Disable blog if not needed
         theme: {
@@ -72,7 +68,7 @@ const config = {
         title: 'Physical AI & Humanoid Robotics',
         logo: {
           alt: 'Robotics Book Logo',
-          src: 'img/logo.svg',
+          src: '/img/hero/robotics-book-logo.png',
         },
         items: [
           {
