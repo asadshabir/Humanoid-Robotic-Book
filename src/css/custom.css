@@ -93,16 +93,41 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Typography scale - using major second modular scale (1.200) */
-  --ifm-font-size-xs: 0.833rem;        /* 10px */
-  --ifm-font-size-sm: 0.833rem;        /* 10px */
-  --ifm-font-size-base: 1rem;          /* 12px - Base size */
-  --ifm-font-size-lg: 1.2rem;          /* 14.4px */
-  --ifm-font-size-xl: 1.44rem;         /* 17.3px */
-  --ifm-font-size-2xl: 1.728rem;       /* 20.7px */
-  --ifm-font-size-3xl: 2.074rem;       /* 24.9px */
-  --ifm-font-size-4xl: 2.488rem;       /* 29.9px */
-  --ifm-font-size-5xl: 2.986rem;       /* 35.8px */
-  --ifm-font-size-6xl: 3.583rem;       /* 43px */
+  --ifm-font-size-xs: 0.75rem;
+  --ifm-font-size-sm: 0.875rem;
+  --ifm-font-size-base: 1rem;
+  --ifm-font-size-lg: 1.125rem;
+  --ifm-font-size-xl: 1.25rem;
+  --ifm-font-size-2xl: 1.5rem;
+  --ifm-font-size-3xl: 1.875rem;
+  --ifm-font-size-4xl: 2.25rem;
+  --ifm-font-size-5xl: 3rem;
+  --ifm-font-size-6xl: 3.75rem;
+
+  /* Spacing and Border Radius */
+  --ifm-global-radius: 8px;
+  --ifm-button-border-radius: 6px;
+  --ifm-card-border-radius: 12px;
+  --ifm-pre-border-radius: 10px;
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-vertical: 1.5rem;
+
+  /* Navbar Refinements */
+  --ifm-navbar-background-color: var(--ifm-color-surface);
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ifm-navbar-item-padding-horizontal: 1rem;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+
+  /* Sidebar Refinements */
+  --ifm-menu-color: var(--ifm-color-text-secondary);
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  --ifm-menu-color-background-active: var(--ifm-color-primary-lightest);
+  --ifm-menu-link-padding-vertical: 0.5rem;
+  --ifm-menu-link-padding-horizontal: 0.75rem;
+
+  /* Table of Contents */
+  --ifm-toc-link-color: var(--ifm-color-text-secondary);
+  --ifm-toc-border-color: var(--ifm-color-border);
 
   /* Line height scale */
   --ifm-line-height-tight: 1.25;
@@ -212,8 +237,87 @@
   --ifm-color-text-tertiary: #a3a3a3;
   --ifm-color-border: #262626;
 
+  --ifm-menu-color-background-active: rgba(72, 152, 236, 0.15);
+
   /* Code and syntax highlighting in dark mode */
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Global Transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Navbar Enhancements */
+.navbar {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ifm-color-border);
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Sidebar Enhancements */
+.menu__link {
+  border-radius: var(--ifm-global-radius);
+  transition: all 0.2s ease;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-emphasis-400);
+}
+
+/* Doc Page Enhancements */
+.theme-doc-markdown header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+}
+
+.theme-doc-markdown h2 {
+  border-bottom: none;
+  margin-top: 3rem;
+}
+
+.theme-doc-footer-edit-meta-row {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--ifm-color-border);
+}
+
+/* Card Enhancements */
+.card {
+  border: 1px solid var(--ifm-color-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 /* Premium Animated UI - CSS Animations */
@@ -463,6 +567,64 @@
   border-left-color: var(--ifm-color-error);
 }
 
+/* Admonition Styling */
+.admonition {
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left-width: 6px;
+  padding: 1.25rem;
+}
+
+.admonition-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Code Block Enhancements */
+.theme-code-block {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem !important;
+}
+
+/* Table Enhancements */
+table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+th {
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 1rem !important;
+}
+
+td {
+  padding: 1rem !important;
+  border-top: 1px solid var(--ifm-color-border);
+}
+
+/* Pagination (Next/Prev) */
+.pagination-nav__link {
+  border-radius: var(--ifm-card-border-radius);
+  border: 1px solid var(--ifm-color-border);
+  transition: all 0.2s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-primary-lightest);
+  transform: translateY(-2px);
+}
+
 /* Technical content styling */
 .technical-ai {
   color: var(--ifm-color-technical-ai);
@@ -566,6 +728,26 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 996px) {
+  .theme-doc-markdown header h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-doc-markdown header h1 {
+    font-size: 1.875rem;
+  }
+
+  .navbar__logo {
+    margin-right: 0.5rem;
+  }
+
+  .navbar__title {
+    font-size: 0.9rem;
+  }
+}
+
 @media (min-width: 997px) {
   .footer {
     display: grid;
