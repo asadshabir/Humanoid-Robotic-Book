@@ -13,10 +13,20 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://physical-ai-humanoid-robotic-book.vercel.app',
+  url: 'https://asadshabir.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
-  baseUrl: '/',
+  baseUrl: '/Humanoid-Robotic-Book/',
+
+  // Custom fields for chatbot configuration
+  customFields: {
+    chatbot: {
+      backendUrl: 'http://localhost:8000', // Default for local development
+      enabled: true,
+      timeout: 30000,
+      maxRetries: 2
+    }
+  },
 
   // GitHub pages deployment config.
   organizationName: 'asadshabir', // Usually your GitHub org/user name.
@@ -24,9 +34,16 @@ const config = {
   deploymentBranch: 'gh-pages', // Branch that GitHub Pages will deploy from.
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
   markdown: {
     format: 'detect',
+    mdx1Compat: {
+      'comments': true,
+      'admonitions': true,
+      'headingIds': true,
+    },
+    'hooks': {
+      'onBrokenMarkdownLinks': 'warn',
+    },
   },
 
   // Even if you don't use internationalization, you can use this field to set
@@ -76,11 +93,19 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Modules',
+            className: 'navbar-item-modules',
+          },
+          {
+            to: '/chatbot',
+            label: 'Chatbot',
+            position: 'left',
+            className: 'navbar-item-chatbot',
           },
           {
             href: 'https://github.com/asadshabir/Humanoid-Robotic-Book',
             label: 'GitHub',
             position: 'right',
+            className: 'navbar-item-github',
           },
         ],
       },

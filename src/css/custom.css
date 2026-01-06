@@ -260,6 +260,25 @@
   letter-spacing: -0.02em;
 }
 
+/* Navbar Icon Customization */
+.navbar-item-modules::before {
+  content: '📚';
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.navbar-item-chatbot::before {
+  content: '🤖';
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.navbar-item-github::before {
+  content: '🐙';
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
 /* Sidebar Enhancements */
 .menu__link {
   border-radius: var(--ifm-global-radius);
@@ -268,6 +287,33 @@
 
 .menu__link--active {
   font-weight: 600;
+}
+
+/* Sidebar Icon Customization */
+.sidebar-item-foundations .menu__link::before { content: '🏗️'; margin-right: 0.6rem; }
+.sidebar-item-robotics .menu__link::before { content: '🦾'; margin-right: 0.6rem; }
+.sidebar-item-control .menu__link::before { content: '🕹️'; margin-right: 0.6rem; }
+.sidebar-item-perception .menu__link::before { content: '👁️'; margin-right: 0.6rem; }
+.sidebar-item-learning .menu__link::before { content: '🧠'; margin-right: 0.6rem; }
+.sidebar-item-integration .menu__link::before { content: '🚀'; margin-right: 0.6rem; }
+.sidebar-item-ros .menu__link::before { content: '📡'; margin-right: 0.6rem; }
+.sidebar-item-digital-twin .menu__link::before { content: '🌐'; margin-right: 0.6rem; }
+.sidebar-item-ai-brain .menu__link::before { content: '💾'; margin-right: 0.6rem; }
+.sidebar-item-capstone .menu__link::before { content: '🎓'; margin-right: 0.6rem; }
+.sidebar-item-advanced .menu__link::before { content: '🗂️'; margin-right: 0.6rem; }
+
+/* Enhanced Sidebar Spacing */
+.menu__list .menu__list {
+  margin-top: 0.25rem;
+  padding-left: 1.5rem;
+}
+
+.menu__list-item {
+  margin-bottom: 0.25rem;
+}
+
+.menu__link {
+  padding: 0.6rem 0.8rem;
 }
 
 /* Scrollbar Styling */
