@@ -83,3 +83,6 @@ Thumbs.db:encryptable
 !.github/workflows
 
 nul
+
+.vercel
+.env*.local

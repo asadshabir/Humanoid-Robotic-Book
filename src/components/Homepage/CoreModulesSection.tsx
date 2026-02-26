@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from '../../pages/index.module.css';
+import RobotIcon, { RoboticIcons } from '../Icon/RobotIcon';
 
 interface Module {
   id: string;
@@ -17,28 +18,28 @@ const CoreModulesSection: React.FC = () => {
       id: 'robotic-nervous-system',
       title: 'The Robotic Nervous System (ROS 2)',
       description: 'Introduction to ROS 2 architecture, node communication patterns, and services and actions implementation.',
-      icon: '🤖', // Using emoji as icon, can be replaced with SVG later
+      icon: RoboticIcons.robot,
       link: '/docs/robotic-nervous-system/'
     },
     {
       id: 'digital-twin',
       title: 'The Digital Twin (Gazebo & Unity)',
       description: 'Gazebo simulation fundamentals, Unity integration for advanced visualization, and co-simulation techniques.',
-      icon: '🎮', // Using emoji as icon, can be replaced with SVG later
+      icon: RoboticIcons.simulation,
       link: '/docs/digital-twin/'
     },
     {
       id: 'ai-robot-brain',
       title: 'The AI-Robot Brain (NVIDIA Isaac)',
       description: 'Perception pipeline development, navigation and control systems, and Isaac AI integration.',
-      icon: '🧠', // Using emoji as icon, can be replaced with SVG later
+      icon: RoboticIcons.brain,
       link: '/docs/ai-robot-brain/'
     },
     {
       id: 'vla-capstone',
       title: 'Vision-Language-Action (VLA) + Capstone',
       description: 'Multimodal integration, capstone project implementation, and advanced VLA systems.',
-      icon: '🔬', // Using emoji as icon, can be replaced with SVG later
+      icon: RoboticIcons.vision,
       link: '/docs/vla-capstone/'
     }
   ];
@@ -57,7 +58,9 @@ const CoreModulesSection: React.FC = () => {
               className={styles.moduleCard}
             >
               <h3>
-                <span className={styles.moduleIcon}>{module.icon}</span>
+                <span className={styles.moduleIcon}>
+                  <RobotIcon icon={module.icon} size="1.5em" />
+                </span>
                 {module.title}
               </h3>
               <p>{module.description}</p>

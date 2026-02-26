@@ -79,7 +79,14 @@ Sensors provide continuous streams of information that must be integrated over t
 ## Sensor Fusion Techniques
 
 ### Kalman Filtering
-Combines multiple noisy sensor readings optimally based on their reliability to estimate state variables like position and velocity.
+Combines multiple noisy sensor readings optimally based on their reliability to estimate state variables like position and velocity. Try the interactive sensor fusion simulator below to see how adjusting the noise level and filter strength ($\alpha$) affects the signal:
+
+import InteractiveSimulation from '@site/src/components/InteractiveSimulation';
+
+<InteractiveSimulation
+  type="sensor-fusion"
+  title="Interactive Sensor Fusion & Noise Filtering"
+/>
 
 ### Particle Filtering
 Represents uncertainty with samples, particularly useful for non-Gaussian noise distributions and non-linear systems.

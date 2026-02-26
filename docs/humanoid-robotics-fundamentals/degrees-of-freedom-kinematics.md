@@ -99,7 +99,14 @@ To understand humanoid robot DoF, it's helpful to compare with human capabilitie
 ## Kinematic Chains and Coordinate Systems
 
 ### Forward Kinematics
-Forward kinematics calculates the position and orientation of the end-effector (hand, foot, etc.) given the joint angles:
+Forward kinematics calculates the position and orientation of the end-effector (hand, foot, etc.) given the joint angles. Try the interactive 2-DoF robotic arm simulator below to see how adjusting joint angles ($\theta_1, \theta_2$) affects the position of the end-effector:
+
+import InteractiveSimulation from '@site/src/components/InteractiveSimulation';
+
+<InteractiveSimulation
+  type="robotic-arm"
+  title="Interactive 2-DoF Robotic Arm (Forward Kinematics)"
+/>
 
 #### Mathematical Representation
 - **Joint Space**: Vector of joint angles θ = [θ₁, θ₂, ..., θₙ]

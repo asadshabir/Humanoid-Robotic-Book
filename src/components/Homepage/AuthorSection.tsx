@@ -39,7 +39,7 @@ const AuthorSection: React.FC = () => {
           </div>
 
           <h3 className="fade-in-up delay-5">Technical Stack</h3>
-          <div className="fade-in-up delay-6">
+          <div className="fade-in-up delay-6" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '1.5rem' }}>
             <span className="badge badge--secondary">Python</span>
             <span className="badge badge--secondary">OpenAI Agents SDK</span>
             <span className="badge badge--secondary">MCP Servers</span>

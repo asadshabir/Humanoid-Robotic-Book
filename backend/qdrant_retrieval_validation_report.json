@@ -1,0 +1,1672 @@
+{
+  "test_summary": {
+    "total_queries": 8,
+    "successful_queries": 1,
+    "failed_queries": 7,
+    "success_rate": 0.125
+  },
+  "test_results": [
+    {
+      "query": "humanoid robot balance control",
+      "top_k": 5,
+      "results_found": true,
+      "num_results": 5,
+      "results": [
+        {
+          "id": 29,
+          "score": 0.08296281,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/control-systems/force-torque-control",
+            "text": "trol - Advantages: Precise torque regulation, fast response - Applications: Series Elastic Actuators (SEA), Variable Stiffness Actuators - Limitations: Higher cost, complexity Computed Torque Control - Approach: Calculate required torques using dynamic model - Equation: τ = M(q) * q̈_des + C(q, q̇) * q̇ + G(q) - Advantages: Linearizes system dynamics - Requirements: Accurate dynamic model Torque-Based Control Strategies Gravity Compensation - Purpose: Compensate for gravitational forces - Implementation: τ_gravity = G(q) - Application: Zero-gravity simulation, safe manual guidance - Benefit: Reduces required control effort Friction Compensation - Purpose: Compensate for static and dynamic friction - Model: τ_friction = f(ẋ, sign(ẋ)) - Application: Precise positioning, low-velocity control - Benefit: Improves control accuracy Feedforward Torque Control - Concept: Add known torques to feedback control - Application: Repetitive tasks with predictable loads - Benefit: Reduces feedback control burden - Requirements: Accurate system model Applications in Humanoid Robotics Manipulation Tasks Grasping and Manipulation - Grasp Force Control: Regulate grip force to avoid object damage - Cont"
+          }
+        },
+        {
+          "id": 151,
+          "score": 0.079900116,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/learning-intelligence/adaptive-learning-online-adaptation",
+            "text": "aptation - Lighting: Adapt to changing lighting conditions - Camera Calibration: Update calibration parameters online - Object Recognition: Adapt to new object appearances - Application: Robust visual perception Sensor Adaptation - Calibration: Maintain sensor calibration over time - Noise: Adapt to changing sensor noise characteristics - Failure: Adapt to partial sensor failures - Application: Reliable sensor-based operation Social Interaction Adaptation Personalization - User Preferences: Learn individual user preferences - Interaction Style: Adapt to user interaction preferences - Communication: Adapt communication style to users - Application: Personalized human-robot interaction Cultural Adaptation - Social Norms: Adapt to different cultural contexts - Behavior: Adjust behavior to social expectations - Etiquette: Learn appropriate social behaviors - Application: Cross-cultural robot deployment Implementation Considerations Real-Time Constraints Computational Efficiency - Algorithm Selection: Choose efficient online algorithms - Hardware Acceleration: Use GPUs or specialized processors - Model Compression: Reduce model complexity for real-time - Optimization: Optimize code for"
+          }
+        },
+        {
+          "id": 260,
+          "score": 0.075255156,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/perception/slam",
+            "text": "Dynamic environment mapping - Challenge: Instance association over time Dynamic SLAM Moving Object Detection - Method: Detect and handle dynamic objects - Approach: Temporal analysis or semantic segmentation - Application: Real-world dynamic environments - Challenge: Distinguishing static/dynamic elements Temporal Consistency - Approach: Model environment changes over time - Method: Temporal maps and change detection - Application: Long-term autonomy - Challenge: Managing temporal complexity Implementation Considerations Real-Time Performance Computational Efficiency - Algorithms: Efficient data structures and algorithms - Parallel Processing: Multi-threading and GPU acceleration - Approximation: Trade accuracy for speed when acceptable - Optimization: Profile and optimize critical paths Memory Management - Map Storage: Efficient representation and compression - Data Structures: Fast access and update operations - Memory Limits: Handle large maps within constraints - Streaming: Process data in real-time streams Robustness and Reliability Failure Recovery - Localization Failure: Detect and recover from failures - Sensor Failure: Handle sensor degradation gracefully - Map Degradation"
+          }
+        },
+        {
+          "id": 70,
+          "score": 0.074442044,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/digital-twin/unity-integration",
+            "text": "Performance Considerations Optimizing Unity simulations for real-time performance while maintaining visual quality requires careful consideration of rendering and physics settings. Summary This chapter covered Unity integration for robotics simulation. The next chapter will explore co-simulation approaches. Validation Hooks - Verify Unity-ROS integration steps are accurate - Confirm sensor simulation examples are valid - Ensure performance optimization techniques are relevant"
+          }
+        },
+        {
+          "id": 243,
+          "score": 0.069480404,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/perception/sensor-fusion-techniques",
+            "text": "perations on ellipsoids - Application: Bounded-error estimation - Efficiency: Computationally efficient set operations Multi-Sensor Integration Strategies Centralized Fusion Architecture - Structure: Single fusion center processes all sensor data - Advantage: Optimal fusion considering all correlations - Disadvantage: Single point of failure, computational bottleneck - Application: Small number of sensors with tight integration Communication Requirements - Bandwidth: High communication between sensors and fusion center - Synchronization: Critical timing coordination - Reliability: Communication system must be highly reliable - Latency: Minimal delay for real-time applications Decentralized Fusion Architecture - Structure: Local processing at each sensor node - Fusion: Higher-level fusion of local estimates - Advantage: Modular, fault-tolerant, scalable - Disadvantage: Suboptimal due to cross-correlation neglect Consensus-Based Fusion - Approach: Distributed agreement on state estimates - Algorithm: Iterative information exchange between nodes - Application: Multi-robot systems, distributed sensing - Convergence: Requires sufficient connectivity Distributed Fusion Architecture - Str"
+          }
+        }
+      ],
+      "metadata_validation": {
+        "total_results": 5,
+        "metadata_validation_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 29,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 97
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 1,
+            "id": 151,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 118
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1199
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 2,
+            "id": 260,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 76
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 3,
+            "id": 70,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 91
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 480
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 4,
+            "id": 243,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 96
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          }
+        ]
+      },
+      "text_validation": {
+        "total_results": 5,
+        "text_accuracy_passed": true,
+        "semantic_relevance_passed": false,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 29,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.5,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 1,
+            "id": 151,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.25,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 2,
+            "id": 260,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 3,
+            "id": 70,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 4,
+            "id": 243,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          }
+        ]
+      },
+      "success": false
+    },
+    {
+      "query": "control systems in robotics",
+      "top_k": 5,
+      "results_found": true,
+      "num_results": 5,
+      "results": [
+        {
+          "id": 109,
+          "score": 0.103970364,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/humanoid-robotics-fundamentals/degrees-of-freedom-kinematics",
+            "text": "Speed: Trade-offs in numerical solution methods - Integration with Dynamics: Combining kinematic and dynamic models for complete control Challenges and Limitations Computational Complexity - Real-Time Constraints: Computing inverse kinematics within control loop timing - Multiple Solutions: Efficiently selecting optimal solutions from many possibilities - Redundancy Resolution: Managing excess DoF in real-time control systems Modeling Accuracy - Parameter Uncertainty: Deviations between nominal and actual kinematic parameters - Flexibility Effects: Joint and link flexibility affecting kinematic relationships - Temperature and Wear: Parameter changes over time affecting model accuracy Safety and Robustness - Singularity Avoidance: Preventing configurations that cause control problems - Joint Limit Management: Ensuring safe operation within mechanical constraints - Failure Recovery: Maintaining functionality when individual joints fail Understanding Degrees of Freedom and kinematics provides the mathematical foundation for controlling humanoid robots effectively."
+          }
+        },
+        {
+          "id": 20,
+          "score": 0.08549139,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/control-systems/classical-control",
+            "text": "le-based methods | Automatic, optimization-based | | Robustness | Limited, sensitive to model changes | Better, systematic robustness design | Implementation Considerations for Humanoid Robots Sampling Rate Selection - High-Frequency Control: Joint servos typically 1-10 kHz for fast response - Mid-Frequency Control: Balance and coordination at 100-500 Hz - Low-Frequency Control: High-level planning at 10-50 Hz - Synchronization: Coordination between different control loops Sensor Integration - Joint Encoders: High-resolution position feedback - IMUs: Orientation and acceleration measurements for balance - Force/Torque Sensors: Contact force feedback for interaction control - Vision Systems: External state estimation and environment sensing Safety and Limitations - Saturation Handling: Preventing control output saturation - Rate Limiting: Limiting rate of change of control commands - Emergency Stop: Fast-acting safety systems for dangerous conditions - Constraint Handling: Respecting joint limits and physical constraints Real-Time Implementation - Deterministic Execution: Predictable timing for control loops - Priority Management: Higher priority for safety-critical control - Commun"
+          }
+        },
+        {
+          "id": 391,
+          "score": 0.07453825,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/system-integration/simulation-to-reality",
+            "text": "d Applications and Examples Research Platforms - Boston Dynamics: Using simulation for developing dynamic locomotion behaviors - Honda ASIMO: Simulation-based development of walking and manipulation skills - Toyota HRP Series: Simulation for testing complex humanoid behaviors - UNITREE: Simulation for developing quadruped and humanoid locomotion Commercial Applications - Service Robots: Sim2Real for safe deployment of service robots in public spaces - Industrial Applications: Simulation for developing safe human-robot collaboration - Entertainment Robots: Simulation for developing engaging robot behaviors - Assistive Robotics: Simulation for developing safe assistive robotic systems Learning Applications - Reinforcement Learning: Sim2Real for learning complex humanoid behaviors - Imitation Learning: Using simulation to augment limited real-world demonstrations - Safe Learning: Simulation for learning without risk to real hardware - Policy Optimization: Improving policies through simulation-based optimization Advanced Sim2Real Considerations Sensor Simulation Fidelity Visual Sensor Simulation - Camera Models: Accurately simulating camera distortion and noise - Lighting Conditions: M"
+          }
+        },
+        {
+          "id": 96,
+          "score": 0.07255818,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/humanoid-robotics-fundamentals/balance-gait-locomotion",
+            "text": "ime - Safety Margins: Ensuring stability even with computational delays - Fallback Behaviors: Safe responses when primary control fails Design Implications Mechanical Design Locomotion requirements influence robot construction: - Leg Design: Appropriate length, strength, and range of motion - Actuator Selection: Power, speed, and precision requirements for joints - Sensing Integration: Placement of force, position, and inertial sensors - Structural Rigidity: Maintaining stability during dynamic motion Control System Design - Computational Requirements: Processing power for real-time gait control - Communication Architecture: Fast communication between sensors and actuators - Safety Systems: Multiple layers of protection and emergency responses - Calibration Needs: Regular calibration of sensors and actuators Software Architecture - Modularity: Separating gait planning from balance control - Real-Time Constraints: Meeting strict timing requirements - Safety Integration: Ensuring locomotion safety in all situations - Learning Integration: Incorporating adaptive and learning capabilities Challenges and Limitations Computational Complexity - Real-Time Requirements: Meeting control loop"
+          }
+        },
+        {
+          "id": 349,
+          "score": 0.07106061,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/system-integration/industrial-research-applications",
+            "text": "cy: Optimizing walking patterns for minimal energy consumption Manipulation Research - Dexterous Manipulation: Developing fine motor control capabilities - Grasp Planning: Researching optimal grasping strategies for various objects - Tool Use: Teaching robots to use human tools effectively - Multi-Object Manipulation: Handling multiple objects simultaneously Control Systems Research - Whole-Body Control: Coordinating multiple limbs and the torso - Real-Time Control: Developing fast, responsive control systems - Adaptive Control: Creating systems that adapt to changing conditions - Robust Control: Ensuring stable operation under uncertainty Artificial Intelligence and Machine Learning Learning Systems - Reinforcement Learning: Training robots through trial and error in physical environments - Imitation Learning: Learning skills from human demonstrations - Transfer Learning: Applying learned skills to new tasks and environments - Multi-Task Learning: Learning multiple skills simultaneously Perception and Cognition - Environmental Understanding: Developing spatial and object recognition - Social Cognition: Understanding human intentions and social cues - Decision Making: Researching a"
+          }
+        }
+      ],
+      "metadata_validation": {
+        "total_results": 5,
+        "metadata_validation_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 109,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 121
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1077
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 1,
+            "id": 20,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 94
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 2,
+            "id": 391,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 101
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 3,
+            "id": 96,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 115
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 4,
+            "id": 349,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 112
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          }
+        ]
+      },
+      "text_validation": {
+        "total_results": 5,
+        "text_accuracy_passed": true,
+        "semantic_relevance_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 109,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.75,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 1,
+            "id": 20,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.5,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 2,
+            "id": 391,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.5,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 3,
+            "id": 96,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.5,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 4,
+            "id": 349,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.75,
+            "relevance_comment": "Text is semantically relevant"
+          }
+        ]
+      },
+      "success": true
+    },
+    {
+      "query": "bipedal locomotion",
+      "top_k": 5,
+      "results_found": true,
+      "num_results": 5,
+      "results": [
+        {
+          "id": 393,
+          "score": 0.090586804,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/system-integration/simulation-to-reality",
+            "text": "reality Environmental Modeling Contact Modeling - Friction Models: Accurately modeling static and dynamic friction - Contact Stiffness: Modeling the stiffness of contact interactions - Impact Dynamics: Modeling collision and impact behaviors - Surface Properties: Modeling different surface characteristics Dynamic Environments - Moving Objects: Simulating dynamic obstacles and moving elements - Changing Conditions: Modeling environmental changes over time - Human Interaction: Simulating human-robot interaction scenarios - Multi-Agent Systems: Modeling interactions with other agents Design Implications and Best Practices Simulation Design Principles - Fidelity vs."
+          }
+        },
+        {
+          "id": 25,
+          "score": 0.08768968,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/control-systems/force-torque-control",
+            "text": "Impedance Control is a force control approach that regulates the relationship between force and position errors, effectively controlling the robot's mechanical impedance to achieve desired interaction behaviors. Admittance Control is a force control approach that relates input forces to output motions, controlling how the robot responds to external forces applied by the environment. Why Force and Torque Control is Critical for Humanoid Robotics Force and torque control is fundamental for several essential aspects of humanoid robotics: 1. Safe Human Interaction Force control ensures that humanoid robots can interact with humans safely by limiting contact forces and providing compliant behavior during physical contact. 2. Delicate Manipulation Precise force control enables robots to handle fragile objects and perform tasks requiring specific force application, such as assembly or medical procedures. 3. Stable Contact Management Force control allows robots to maintain stable contacts with surfaces and objects, essential for tasks like walking, pushing, or supporting themselves. 4."
+          }
+        },
+        {
+          "id": 69,
+          "score": 0.08144222,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/digital-twin/unity-integration",
+            "text": "Unity Integration Overview This chapter explores the integration of Unity with robotics simulation, providing an alternative to traditional physics simulators with enhanced visualization capabilities. Learning Objectives After completing this chapter, you will be able to: - Understand Unity's role in robotics simulation - Set up Unity for robotics applications - Implement sensor simulation in Unity - Integrate with ROS 2 systems Table of Contents - Unity for Robotics - ROS Integration - Sensor Simulation - Environment Creation - Performance Considerations Unity for Robotics Unity provides a powerful platform for creating realistic simulation environments with high-quality graphics and physics. ROS Integration Unity can be integrated with ROS 2 through specialized packages that enable communication between Unity and ROS nodes. Sensor Simulation Unity enables the simulation of various sensors including cameras, LIDAR, and IMU sensors with realistic data output. Environment Creation Creating complex environments in Unity involves using the built-in tools and assets to build realistic simulation scenarios."
+          }
+        },
+        {
+          "id": 186,
+          "score": 0.07407524,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/learning-intelligence/machine-learning-fundamentals",
+            "text": "Machine Learning Fundamentals Machine Learning (ML) forms the cornerstone of intelligence in humanoid robots, enabling them to learn from experience, adapt to new situations, and improve their performance over time. Unlike traditional programming approaches, ML allows robots to automatically identify patterns, make predictions, and optimize behaviors based on data. Understanding these fundamentals is essential for developing humanoid robots that can learn, adapt, and interact intelligently with their environment and humans. Core Definition Machine Learning is a subset of artificial intelligence that focuses on developing algorithms and statistical models that enable systems to improve their performance on a specific task through experience, without being explicitly programmed for every situation. Supervised Learning is a type of machine learning where the algorithm learns from labeled training data, making predictions based on input-output pairs provided during training. Unsupervised Learning involves finding hidden patterns or structures in data without labeled examples, allowing the algorithm to discover underlying relationships."
+          }
+        },
+        {
+          "id": 12,
+          "score": 0.07130118,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/ai-robot-brain/perception-pipeline",
+            "text": "Summary This chapter covered perception pipelines in AI-powered robots. The next chapter will explore navigation and control. Validation Hooks - Verify neural network implementation examples are accurate - Confirm sensor fusion techniques are properly explained - Ensure real-time processing considerations are addressed"
+          }
+        }
+      ],
+      "metadata_validation": {
+        "total_results": 5,
+        "metadata_validation_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 393,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 101
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 670
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 1,
+            "id": 25,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 97
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1094
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 2,
+            "id": 69,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 91
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1119
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 3,
+            "id": 186,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 112
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1149
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 4,
+            "id": 12,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 95
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 320
+              }
+            },
+            "missing_fields": []
+          }
+        ]
+      },
+      "text_validation": {
+        "total_results": 5,
+        "text_accuracy_passed": true,
+        "semantic_relevance_passed": false,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 393,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 1,
+            "id": 25,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 2,
+            "id": 69,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 3,
+            "id": 186,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 4,
+            "id": 12,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          }
+        ]
+      },
+      "success": false
+    },
+    {
+      "query": "robotic gait planning",
+      "top_k": 5,
+      "results_found": true,
+      "num_results": 5,
+      "results": [
+        {
+          "id": 9,
+          "score": 0.10650836,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/ai-robot-brain/navigation-control",
+            "text": "Navigation and Control Overview This chapter covers AI-powered navigation and control systems that enable robots to move autonomously and perform complex tasks. Learning Objectives After completing this chapter, you will be able to: - Implement AI-based navigation algorithms - Design control systems for robotic platforms - Integrate perception and navigation systems - Handle dynamic environments Table of Contents - AI Navigation Fundamentals - Path Planning - Control Systems - Learning-based Control - Safety and Reliability AI Navigation Fundamentals AI-powered navigation combines traditional robotics algorithms with machine learning for improved performance in complex environments. Path Planning Advanced path planning algorithms leverage AI to find optimal routes in dynamic environments. Control Systems AI-enhanced control systems adapt to changing conditions and improve robot performance. Learning-based Control Reinforcement learning and other AI techniques enable robots to learn control strategies through experience. Safety and Reliability Ensuring safety in AI-powered navigation and control systems requires careful design and validation."
+          }
+        },
+        {
+          "id": 201,
+          "score": 0.09684315,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/learning-intelligence/machine-learning-fundamentals",
+            "text": "dapting to unseen situations - Safety: Ensuring safe behavior during learning Data Challenges - Acquisition: Expensive and time-consuming data collection - Quality: Noise and bias in sensor data - Annotation: Manual labeling requirements - Privacy: Handling sensitive data appropriately Safety Considerations - Reliability: Ensuring consistent performance - Interpretability: Understanding model decisions - Robustness: Handling adversarial inputs - Validation: Comprehensive testing in real environments Emerging Approaches Advanced Architectures - Transformer Models: Attention-based architectures - Neural ODEs: Continuous neural networks - Graph Neural Networks: Learning on graph-structured data - Meta-Learning: Learning to learn quickly Efficient Learning - Federated Learning: Distributed learning without data sharing - Continual Learning: Learning without forgetting previous knowledge - Self-Supervised Learning: Learning without manual labels - Few-Shot Learning: Learning from very few examples Machine Learning Fundamentals provide the essential foundation for intelligent behavior in humanoid robots, enabling them to learn from experience, adapt to new situations, and improve their p"
+          }
+        },
+        {
+          "id": 67,
+          "score": 0.07073245,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/digital-twin/gazebo-fundamentals",
+            "text": "Gazebo Fundamentals Overview This chapter introduces Gazebo, a powerful physics-based simulator for robotics applications. Gazebo provides realistic simulation environments for testing and validating robotic systems. Learning Objectives After completing this chapter, you will be able to: - Understand the core concepts of Gazebo simulation - Set up and configure Gazebo environments - Create and import robot models - Implement physics-based simulations Table of Contents - Introduction to Gazebo - Installation and Setup - Gazebo Architecture - Creating Simulation Worlds - Robot Models and URDF - Physics Simulation Introduction to Gazebo Gazebo is a physics-based simulation engine that provides realistic simulation of robots in complex indoor and outdoor environments. It includes: - High-fidelity physics simulation - Advanced 3D graphics - Multiple sensors - User interfaces Installation and Setup Gazebo can be installed as a standalone application or integrated with ROS 2 for robotics development."
+          }
+        },
+        {
+          "id": 164,
+          "score": 0.06144049,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/learning-intelligence/imitation-learning",
+            "text": "ting safety systems Advanced Imitation Learning Techniques Guided Cost Learning Concept - Cost Function: Learn cost function from demonstrations - Guidance: Use learned cost to guide exploration - Optimization: Optimize policy using learned cost - Application: Stable learning from demonstrations Process - Cost Learning: Learn cost function matching demonstrations - Policy Optimization: Optimize policy for learned cost - Iteration: Alternate between cost and policy learning - Convergence: Continue until policy matches expert Maximum Causal Entropy IRL (MCE-IRL) Principle - Causal Entropy: Maximize entropy over state-action trajectories - Bellman Equation: Incorporate dynamic programming structure - Optimality: Ensure learned policy is optimal - Application: More principled IRL approach Algorithm - Forward Pass: Compute state visitation frequencies - Backward Pass: Compute optimal Q-values - Iteration: Repeat until convergence - Policy Extraction: Extract optimal policy Adversarial Inverse Reinforcement Learning (AIRL) Concept - Advantage Learning: Learn advantage function instead of reward - Discriminator: Distinguish expert from policy using advantage - Robustness: More robust to r"
+          }
+        },
+        {
+          "id": 337,
+          "score": 0.060623843,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/robotic-nervous-system/services-actions",
+            "text": "Services and Actions Overview This chapter covers advanced communication patterns in ROS 2, specifically services and actions, which provide synchronous and goal-oriented communication respectively. Learning Objectives After completing this chapter, you will be able to: - Implement service-based communication - Create and use actions for goal-oriented tasks - Choose appropriate communication patterns for different scenarios - Understand Quality of Service (QoS) settings Table of Contents Services in ROS 2 Services provide a request-response communication pattern. A service client sends a request and waits for a response from the service server."
+          }
+        }
+      ],
+      "metadata_validation": {
+        "total_results": 5,
+        "metadata_validation_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 9,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 94
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1159
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 1,
+            "id": 201,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 112
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 2,
+            "id": 67,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 93
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1008
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 3,
+            "id": 164,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 101
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 4,
+            "id": 337,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 100
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 652
+              }
+            },
+            "missing_fields": []
+          }
+        ]
+      },
+      "text_validation": {
+        "total_results": 5,
+        "text_accuracy_passed": true,
+        "semantic_relevance_passed": false,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 9,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.6666666666666666,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 1,
+            "id": 201,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 2,
+            "id": 67,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.3333333333333333,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 3,
+            "id": 164,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 4,
+            "id": 337,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          }
+        ]
+      },
+      "success": false
+    },
+    {
+      "query": "inverse kinematics",
+      "top_k": 5,
+      "results_found": true,
+      "num_results": 5,
+      "results": [
+        {
+          "id": 135,
+          "score": 0.088385865,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/humanoid-robotics-fundamentals/forward-inverse-kinematics",
+            "text": "taining smooth motion during solution transitions Physical Constraints - Joint Limits: Ensuring solutions respect mechanical limitations - Collision Avoidance: Incorporating self-collision and environmental constraints - Dynamic Constraints: Considering velocity and acceleration limits Forward and Inverse Kinematics represent complementary approaches to robot motion control, each with distinct advantages and applications. Forward kinematics provides reliable verification and prediction capabilities, while inverse kinematics enables intuitive task-oriented control. Understanding both approaches and their interplay is essential for developing sophisticated humanoid robot control systems that can achieve human-like dexterity and mobility."
+          }
+        },
+        {
+          "id": 321,
+          "score": 0.07416666,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/physical-ai-foundations/sensors-in-physical-intelligence",
+            "text": "igh precision - Inertial Measurement Units (IMUs): Provide acceleration and angular velocity information - Gyroscopes: Measure angular rates for balance and orientation Dynamic Sensors - Force/Torque Sensors: Monitor internal forces and external contacts - Current Sensors: Indicate motor load and external resistance - Temperature Sensors: Monitor system health and environmental conditions How Sensors Enable Physical Intelligence Conceptually Multi-Modal Integration Physical AI systems combine information from multiple sensor modalities to create a comprehensive understanding of their situation. This integration compensates for the limitations of individual sensors and provides redundancy for robust operation. Sensorimotor Coordination Sensory information is closely coupled with motor commands, creating sensorimotor contingencies that form the basis for understanding the relationship between actions and their consequences. Active Sensing Rather than passively receiving information, Physical AI systems often control their sensors actively, directing cameras, adjusting sensor parameters, or moving sensors to gather the most relevant information for their current task."
+          }
+        },
+        {
+          "id": 288,
+          "score": 0.0718406,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/physical-ai-foundations/actuators-motion-fundamentals",
+            "text": "ires air compressor, compressibility affects stiffness Novel Actuator Technologies - Shape Memory Alloys: Materials that change shape with temperature - Electroactive Polymers: Materials that deform when voltage is applied - Pneumatic Artificial Muscles: Biomimetic actuators that contract like biological muscles - Series Elastic Actuators: Include springs in series for safer, more compliant interaction Motion Fundamentals Degrees of Freedom (DoF) Degrees of freedom represent the number of independent parameters that define the configuration of a mechanical system."
+          }
+        },
+        {
+          "id": 21,
+          "score": 0.06742985,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/control-systems/classical-control",
+            "text": "ication: Fast communication between sensors and actuators - Computation Allocation: Efficient use of processing resources Advanced Control Techniques Building on Classical Methods Cascade Control - Structure: Multiple control loops in series - Application: Position-velocity-current control hierarchy - Benefits: Improved performance, better disturbance rejection Feedforward Control - Concept: Adding known system behavior to control command - Application: Gravity compensation, friction compensation - Benefits: Improved tracking performance, reduced feedback burden Adaptive Control - Approach: Adjusting controller parameters based on system behavior - Application: Handling parameter uncertainties and changes - Benefits: Maintaining performance with varying conditions Design Implications Control Architecture Classical control methods influence system design: - Modularity: Separating different control functions and levels - Redundancy: Multiple control approaches for safety and performance - Scalability: Extending control methods to more complex systems System Integration - Sensor Requirements: Determining necessary sensing for control - Actuator Specifications: Power, speed, and precis"
+          }
+        },
+        {
+          "id": 14,
+          "score": 0.06408309,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/control-systems/classical-control",
+            "text": "State-Space Control represents a system using state variables that describe the system's complete state, allowing for multi-input, multi-output (MIMO) control design and more sophisticated control strategies. Why Classical Control Matters in Humanoid Robotics Understanding classical control is fundamental for several critical aspects of humanoid robotics: 1. Joint-Level Control Classical control methods provide the foundation for precise control of individual robot joints, ensuring accurate positioning and smooth motion execution. 2. Balance and Stability Classical control techniques enable humanoid robots to maintain balance by regulating center of mass position, zero-moment point (ZMP), and other stability metrics. 3. Trajectory Tracking These methods allow robots to follow desired motion trajectories with minimal error and appropriate dynamic response. 4. Systematic Design Process Classical control provides mathematically rigorous approaches to control system design with predictable performance characteristics."
+          }
+        }
+      ],
+      "metadata_validation": {
+        "total_results": 5,
+        "metadata_validation_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 135,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 118
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 745
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 1,
+            "id": 321,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 117
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1183
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 2,
+            "id": 288,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 114
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 570
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 3,
+            "id": 21,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 94
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 4,
+            "id": 14,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 94
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1029
+              }
+            },
+            "missing_fields": []
+          }
+        ]
+      },
+      "text_validation": {
+        "total_results": 5,
+        "text_accuracy_passed": true,
+        "semantic_relevance_passed": false,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 135,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 1.0,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 1,
+            "id": 321,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 2,
+            "id": 288,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 3,
+            "id": 21,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 4,
+            "id": 14,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          }
+        ]
+      },
+      "success": false
+    },
+    {
+      "query": "motion planning algorithms",
+      "top_k": 5,
+      "results_found": true,
+      "num_results": 5,
+      "results": [
+        {
+          "id": 341,
+          "score": 0.08754286,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/system-integration/",
+            "text": "Learning Path This module is structured to build your understanding progressively: - ROS 2 Architecture for Humanoids: Understanding the Robot Operating System 2 for humanoid applications - Simulation to Reality (Sim2Real): Bridging the gap between simulation and real-world deployment - Safety, Ethics, and Human-Robot Interaction: Ensuring safe and ethical robot deployment - Industrial and Research Applications: Exploring practical applications of humanoid robots Each section builds upon the previous ones, creating a comprehensive understanding of how humanoid robots are integrated and deployed in real-world scenarios."
+          }
+        },
+        {
+          "id": 283,
+          "score": 0.07605459,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/physical-ai-foundations/",
+            "text": "Topics Covered - What is Physical AI?: Understanding the fundamental concept of Physical AI and how it differs from traditional digital AI - Difference Between Digital AI and Physical AI: Comparing traditional digital AI systems with embodied Physical AI systems and their distinct characteristics - Embodied Intelligence Explained: Understanding the concept of embodied intelligence and its role in Physical AI systems - Role of Sensors in Physical Intelligence: Understanding how sensors enable Physical AI systems to perceive and understand the physical world - Actuators and Motion Fundamentals: Understanding the role of actuators in Physical AI and fundamental principles of robotic motion - Feedback Loops and Control Basics: Fundamental concepts of feedback control systems in Physical AI and their role in closed-loop robotic systems) Target Audience This module is designed for: - Beginners entering robotics and Physical AI - Those seeking to understand the fundamental differences between digital and physical intelligence - Anyone interested in how AI systems can meaningfully interact with the physical world Prerequisites While no specific prerequisites are required, a basic understan"
+          }
+        },
+        {
+          "id": 217,
+          "score": 0.07383701,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/learning-intelligence/reinforcement-learning-robotics",
+            "text": "mulation: High-fidelity simulation environments - Real Robot Testing: Safe real-robot validation - Data Management: Efficient data collection and storage - Experiment Tracking: Monitor and compare experiments Challenges and Limitations Technical Challenges - Sample Efficiency: Requiring large amounts of training data - Safety: Ensuring safe learning in real environments - Generalization: Adapting to unseen situations - Real-time Performance: Meeting control loop timing Practical Challenges - Hardware Wear: Physical component degradation during learning - Time Constraints: Practical deployment timelines - Safety Regulations: Compliance with safety standards - Validation: Comprehensive testing requirements Research Challenges - Sim-to-Real Gap: Bridging simulation and reality - Multi-Modal Learning: Handling diverse sensor modalities - Long-Horizon Tasks: Learning complex, multi-step tasks - Human-Robot Learning: Learning with human interaction Emerging Approaches Advanced Architectures - Transformer RL: Attention-based RL architectures - Graph Neural Networks: Learning on robot structure graphs - Neural ODEs: Continuous-time neural networks - Diffusion Models: Generative approaches"
+          }
+        },
+        {
+          "id": 376,
+          "score": 0.072940886,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/system-integration/safety-ethics-human-robot-interaction",
+            "text": "ups - Debiasing Techniques: Methods for reducing bias in algorithms - Continuous Monitoring: Ongoing assessment of fairness in deployed systems Inclusive Design - Universal Access: Ensuring robots are accessible to all users - Cultural Sensitivity: Respecting cultural differences in interaction - Language Inclusion: Supporting multiple languages and dialects - Age-Appropriate Design: Adapting interaction for different age groups Human-Robot Interaction Design Interaction Modalities Verbal Communication - Natural Language Processing: Understanding and generating human language - Speech Recognition: Accurate recognition across different speakers and accents - Speech Synthesis: Natural-sounding speech generation - Dialogue Management: Managing complex multi-turn conversations Non-Verbal Communication - Gestures: Understanding and generating meaningful gestures - Facial Expressions: Expressing emotions and intentions through facial displays - Body Language: Using posture and movement for communication - Proxemics: Understanding and respecting personal space Multimodal Interaction - Integration: Combining multiple interaction modalities effectively - Context Awareness: Adapting interact"
+          }
+        },
+        {
+          "id": 360,
+          "score": 0.07258096,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/system-integration/ros2-architecture-humanoids",
+            "text": "reliable delivery for different data types - Durability Policy: How messages are handled when publishers/subscribers join/leave - History Policy: How many messages to store for late-joining subscribers - Lifespan Policy: How long messages remain valid in the system Node-Based Architecture Node Structure - Definition: A process that performs computation in ROS 2 - Implementation: Nodes can be written in C++, Python, or other supported languages - Humanoid Context: Different nodes handle locomotion control, perception, manipulation, and high-level planning - Lifecycle: Nodes can have managed lifecycles with explicit states (unconfigured, inactive, active) Node Communication - Publish/Subscribe: Asynchronous communication pattern for sensor data and status updates - Services: Synchronous request/response communication for actions requiring confirmation - Actions: Asynchronous communication with feedback and goal management for long-running tasks - Parameters: Dynamic configuration values that can be adjusted at runtime Client Library Implementation rclcpp and rclpy - rclcpp: C++ client library providing native performance for time-critical components - rclpy: Python client library for"
+          }
+        }
+      ],
+      "metadata_validation": {
+        "total_results": 5,
+        "metadata_validation_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 341,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 80
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 626
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 1,
+            "id": 283,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 85
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 2,
+            "id": 217,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 114
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1199
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 3,
+            "id": 376,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 117
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 4,
+            "id": 360,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 107
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          }
+        ]
+      },
+      "text_validation": {
+        "total_results": 5,
+        "text_accuracy_passed": true,
+        "semantic_relevance_passed": false,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 341,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 1,
+            "id": 283,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.3333333333333333,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 2,
+            "id": 217,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 3,
+            "id": 376,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.3333333333333333,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 4,
+            "id": 360,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.3333333333333333,
+            "relevance_comment": "Text is semantically relevant"
+          }
+        ]
+      },
+      "success": false
+    },
+    {
+      "query": "sensor fusion in robotics",
+      "top_k": 5,
+      "results_found": true,
+      "num_results": 5,
+      "results": [
+        {
+          "id": 73,
+          "score": 0.09218594,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/humanoid-robotics-fundamentals/",
+            "text": "Topics Covered - Anatomy of a Humanoid Robot: Understanding the structural organization and functional components of humanoid robots - Degrees of Freedom (DoF) and Kinematics: Exploring the mathematical foundations of robot motion and degrees of freedom - Forward vs Inverse Kinematics: Understanding the fundamental mathematical approaches to robot motion control - Dynamics and Stability in Humanoid Robots: Learning how forces and balance are managed in humanoid systems - Balance, Gait, and Locomotion Principles: Mastering the principles of stable bipedal movement and walking patterns Target Audience This module is designed for: - Beginners seeking to understand humanoid robotics fundamentals - Robotics enthusiasts interested in the mechanical principles of humanoid systems - Engineers and researchers working with humanoid robot platforms - Anyone interested in the engineering challenges of creating human-like robots Prerequisites A basic understanding of robotics concepts and mechanics will be helpful, but is not strictly required. We'll introduce concepts progressively to build your knowledge from the ground up."
+          }
+        },
+        {
+          "id": 169,
+          "score": 0.090920754,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/learning-intelligence/imitation-learning",
+            "text": "imitation Efficient Learning - Few-Shot Imitation: Learning from few demonstrations - Meta Imitation Learning: Learning to imitate quickly - Self-Supervised Learning: Learning without explicit demonstrations - Curriculum Learning: Gradual task complexity increase Human-Robot Collaboration - Interactive Learning: Learning from human feedback - Co-Learning: Humans and robots learning together - Adaptive Teaching: Humans adapting demonstrations to robot - Social Learning: Learning through social interaction Imitation Learning provides a powerful approach for humanoid robots to acquire complex behaviors by learning from expert demonstrations. By leveraging human expertise, robots can rapidly acquire natural, safe, and effective behaviors that would be difficult to program explicitly or learn through trial and error. Understanding these techniques and their implementation considerations is crucial for developing humanoid robots with sophisticated learning and adaptive capabilities."
+          }
+        },
+        {
+          "id": 4,
+          "score": 0.08671816,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/advanced-docs/docitem-transitions",
+            "text": "Accessibility Considerations - Full support for prefers-reduced-motion media query - Maintains keyboard navigation and focus management - Proper semantic HTML structure CSS Animations The implementation uses both CSS transitions and JavaScript-controlled animations: - CSS handles the main page transitions and transforms - JavaScript manages the timing and state changes - All animations are disabled when users prefer reduced motion Performance Optimizations - Use of will-change property for elements that will animate - CSS contain property to optimize rendering - Staggered animations to prevent jank - Proper cleanup of event listeners and timeouts Best Practices for Customization 1. Maintain Accessibility - Always respect user preferences for reduced motion - Ensure content remains accessible when animations are disabled - Maintain proper focus management 2. Performance Considerations - Use CSS transforms and opacity for smooth animations - Avoid animating layout properties like width, height, margin, padding - Implement proper cleanup of effects and timers 3."
+          }
+        },
+        {
+          "id": 10,
+          "score": 0.08540933,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/ai-robot-brain/navigation-control",
+            "text": "Summary This chapter completed our exploration of AI-robot brains. The next module will cover Vision-Language-Action systems. Validation Hooks - Verify navigation algorithm implementations are accurate - Confirm safety considerations are properly addressed - Ensure control system examples are valid"
+          }
+        },
+        {
+          "id": 65,
+          "score": 0.07344792,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/digital-twin/co-simulation",
+            "text": "Co-simulation Overview This chapter covers co-simulation techniques that combine multiple simulation environments to leverage the strengths of each platform. Learning Objectives After completing this chapter, you will be able to: - Understand co-simulation concepts and benefits - Implement communication between different simulators - Choose appropriate simulation platforms for different tasks - Validate co-simulation setups Table of Contents - Co-simulation Concepts - Gazebo-Unity Integration - Communication Protocols - Use Cases and Examples - Validation and Verification Co-simulation Concepts Co-simulation involves running multiple simulation environments simultaneously and exchanging data between them in real-time. Gazebo-Unity Integration Combining Gazebo's physics accuracy with Unity's visual capabilities creates powerful simulation environments. Communication Protocols Establishing reliable communication between simulation environments requires careful consideration of timing and data formats. Use Cases and Examples Real-world examples of co-simulation in robotics development and testing."
+          }
+        }
+      ],
+      "metadata_validation": {
+        "total_results": 5,
+        "metadata_validation_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 73,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 92
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1130
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 1,
+            "id": 169,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 101
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 991
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 2,
+            "id": 4,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 94
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1075
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 3,
+            "id": 10,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 94
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 299
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 4,
+            "id": 65,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 87
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1111
+              }
+            },
+            "missing_fields": []
+          }
+        ]
+      },
+      "text_validation": {
+        "total_results": 5,
+        "text_accuracy_passed": true,
+        "semantic_relevance_passed": false,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 73,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.5,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 1,
+            "id": 169,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 2,
+            "id": 4,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 3,
+            "id": 10,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 4,
+            "id": 65,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.5,
+            "relevance_comment": "Text is semantically relevant"
+          }
+        ]
+      },
+      "success": false
+    },
+    {
+      "query": "robotic control theory",
+      "top_k": 5,
+      "results_found": true,
+      "num_results": 5,
+      "results": [
+        {
+          "id": 306,
+          "score": 0.094141275,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/physical-ai-foundations/feedback-control-basics",
+            "text": "Feedback Loops and Control Basics Feedback loops and control systems form the backbone of Physical AI systems, enabling them to interact effectively with the physical world. Unlike open-loop systems that execute predetermined actions regardless of outcomes, feedback control systems continuously monitor their performance and adjust their behavior based on sensory information. This closed-loop approach is essential for achieving stable, adaptive, and robust behavior in the face of environmental uncertainties and disturbances."
+          }
+        },
+        {
+          "id": 13,
+          "score": 0.08833754,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/control-systems/classical-control",
+            "text": "Classical Control (PID, State Space) Classical control theory forms the foundation of robotic control systems, providing mathematically rigorous methods for achieving desired behaviors in humanoid robots. These techniques, particularly Proportional-Integral-Derivative (PID) control and state-space control, enable precise regulation of robot motion, balance, and interaction with the environment. Understanding classical control is essential for developing stable, responsive, and accurate humanoid robot behaviors. Core Definition Classical Control refers to traditional control theory methods that use mathematical models to design controllers that regulate system behavior. In humanoid robotics, classical control techniques provide systematic approaches to achieve desired trajectories, maintain balance, and control interaction forces. PID Control (Proportional-Integral-Derivative) is a feedback control algorithm that calculates an error value as the difference between a desired setpoint and a measured process variable, then applies a correction based on proportional, integral, and derivative terms."
+          }
+        },
+        {
+          "id": 396,
+          "score": 0.08783357,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/system-integration/simulation-to-reality",
+            "text": "earning to adapt quickly to new environments - Causal Reasoning: Understanding causal relationships for better transfer - Self-Supervised Learning: Learning representations that transfer well - Foundation Models: Large-scale models that can adapt to new tasks Simulation to Reality (Sim2Real) remains one of the most challenging aspects of humanoid robotics development. Successfully bridging the reality gap requires careful consideration of sensor, actuator, and environmental differences, along with sophisticated transfer techniques. As humanoid robots become more complex and capable, the importance of effective Sim2Real methods will continue to grow, making this a critical area of research and development in the field."
+          }
+        },
+        {
+          "id": 155,
+          "score": 0.082920656,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/learning-intelligence/adaptive-learning-online-adaptation",
+            "text": "tion-based adaptation Efficient Learning - Federated Learning: Distributed learning without data sharing - Continual Learning: Learning without forgetting - Self-Supervised Learning: Learning without manual labels - Few-Shot Adaptation: Adapting from few examples Human-in-the-Loop - Interactive Learning: Humans guiding adaptation process - Preference Elicitation: Learning from human feedback - Collaborative Adaptation: Humans and robots adapting together - Explainable Adaptation: Understanding adaptation decisions Adaptive Learning and Online Adaptation provide essential capabilities for humanoid robots to maintain performance and effectiveness over extended deployment periods. These techniques enable robots to respond to changing environments, user preferences, and task requirements in real-time, making them suitable for long-term autonomous operation in dynamic real-world settings. Understanding these approaches and their implementation considerations is crucial for developing robust, adaptable humanoid robotic systems."
+          }
+        },
+        {
+          "id": 328,
+          "score": 0.08180688,
+          "payload": {
+            "url": "https://physical-ai-humanoid-robotics-book01.vercel.app/docs/physical-ai-foundations/what-is-physical-ai",
+            "text": "Traditional AI excels at pattern recognition, data analysis, and virtual environment interactions, but Physical AI extends these capabilities to domains where physical presence and manipulation are essential: - Robotics: Enabling robots to navigate, manipulate objects, and interact with humans in natural environments - Autonomous Systems: Creating vehicles, drones, and machines that operate safely in complex physical spaces - Human-Robot Collaboration: Facilitating safe and effective interaction between humans and robotic systems - Industrial Automation: Developing intelligent systems that can adapt to changing physical conditions How Physical AI Works Conceptually Physical AI systems operate through a continuous cycle of perception, reasoning, and action: - Perception: Sensors collect data from the physical environment (vision, touch, sound, proprioception) - Reasoning: AI algorithms process this information to understand the current state and predict future states - Action: The system generates motor commands to interact with the physical world - Feedback: The results of actions are perceived and feed back into the cycle This closed-loop process distinguishes Physical AI from tra"
+          }
+        }
+      ],
+      "metadata_validation": {
+        "total_results": 5,
+        "metadata_validation_passed": true,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 306,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 108
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 529
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 1,
+            "id": 13,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 94
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1110
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 2,
+            "id": 396,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 101
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 727
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 3,
+            "id": 155,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 118
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1037
+              }
+            },
+            "missing_fields": []
+          },
+          {
+            "result_index": 4,
+            "id": 328,
+            "metadata_present": true,
+            "required_fields_present": true,
+            "field_validations": {
+              "url": {
+                "field": "url",
+                "present": true,
+                "valid_type": true,
+                "value_length": 104
+              },
+              "text": {
+                "field": "text",
+                "present": true,
+                "valid_type": true,
+                "value_length": 1200
+              }
+            },
+            "missing_fields": []
+          }
+        ]
+      },
+      "text_validation": {
+        "total_results": 5,
+        "text_accuracy_passed": true,
+        "semantic_relevance_passed": false,
+        "validation_details": [
+          {
+            "result_index": 0,
+            "id": 306,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.3333333333333333,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 1,
+            "id": 13,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 1.0,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 2,
+            "id": 396,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.0,
+            "relevance_comment": "Text may not be semantically relevant"
+          },
+          {
+            "result_index": 3,
+            "id": 155,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.3333333333333333,
+            "relevance_comment": "Text is semantically relevant"
+          },
+          {
+            "result_index": 4,
+            "id": 328,
+            "text_length_valid": true,
+            "text_content_valid": true,
+            "semantic_relevance_score": 0.3333333333333333,
+            "relevance_comment": "Text is semantically relevant"
+          }
+        ]
+      },
+      "success": false
+    }
+  ],
+  "overall_validation": {
+    "all_tests_passed": false,
+    "metadata_integrity_ok": true,
+    "text_accuracy_ok": true,
+    "semantic_relevance_ok": false
+  }
+}

@@ -26,8 +26,15 @@ Classical control methods provide the foundation for precise control of individu
 ### 2. Balance and Stability
 Classical control techniques enable humanoid robots to maintain balance by regulating center of mass position, zero-moment point (ZMP), and other stability metrics.
 
-### 3. Trajectory Tracking
-These methods allow robots to follow desired motion trajectories with minimal error and appropriate dynamic response.
+### Trajectory Tracking
+These methods allow robots to follow desired motion trajectories with minimal error and appropriate dynamic response. Try the interactive trajectory planning simulator below to see how path smoothing (splines) compares to linear interpolation:
+
+import InteractiveSimulation from '@site/src/components/InteractiveSimulation';
+
+<InteractiveSimulation
+  type="trajectory"
+  title="Interactive Path Smoothing & Trajectory Planning"
+/>
 
 ### 4. Systematic Design Process
 Classical control provides mathematically rigorous approaches to control system design with predictable performance characteristics.

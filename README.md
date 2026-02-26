@@ -1,78 +1,279 @@
-# Physical AI & Humanoid Robotics Book
+<div align="center">
 
-![Creator Profile](static/img/hero/creator-profile.png)
+# 🚀 Physical AI & Humanoid Robotics Book
 
-This repository contains the source code for the "Physical AI & Humanoid Robotics" book built with Docusaurus.
+### *A living, interactive AI-powered textbook built for learners of tomorrow* 🤖📘
 
-## About the Author
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Now-4A90E2?style=for-the-badge)](https://humaniod-robotic-book.vercel.app)
+[![RAG Powered](https://img.shields.io/badge/🧠%20Powered%20By-RAG%20%2B%20Gemini%202.0-8A2BE2?style=for-the-badge)]()
+[![Built With](https://img.shields.io/badge/⚡%20Built%20With-Docusaurus%20%2B%20FastAPI-00C896?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/📜%20License-Educational-F5A623?style=for-the-badge)]()
 
-**Asad Shabir** is a certified **AI & Automation Engineer** and **Python Developer** based in Karachi, Pakistan. With over three years of hands-on coding experience, he specializes in building intelligent, scalable systems using modern AI and automation technologies.
+<br/>
 
-His work focuses on practical AI applications, automation workflows, and intelligent assistants that solve real-world problems. He actively builds AI agents, automation pipelines, and custom chatbots for productivity, research, and business use cases.
+> *"What if your textbook could actually talk back to you?"*
 
-### Core Expertise
-- **AI Agent Development**: Designing and deploying intelligent AI-powered agents using OpenAI Agents SDK and MCP-based architectures for research, automation, and knowledge retrieval.
-- **Workflow Automation**: Building end-to-end automation workflows using **n8n** to eliminate repetitive tasks, optimize operations, and increase efficiency.
-- **Custom Chatbots**: Developing tailored chatbots for customer support, lead generation, and multi-channel communication including Email and WhatsApp.
+</div>
 
-### Technical Stack
-- Python
-- OpenAI Agents SDK
-- MCP Servers
-- n8n Automation
-- Chainlit UI
-- SQLite
-- Docker (learning)
-- Kubernetes (learning)
+---
 
-### Key Achievements
-- **Pocket Buddy AI Assistant**: Built a multi-functional personal AI assistant with voice interaction, reminders, and web search capabilities.
-- **Business Automation Systems**: Designed automation systems that reduced human support workload through 24/7 AI-driven responses and content automation.
-- **Certified Professional**: Currently completing the **Governor Initiative (GIAIC)** certification in **AI, Web 3.0, and Metaverse**.
+## 🎯 What Is This Project?
 
-## Book Creation Journey
+Imagine a robotics textbook that **can answer your questions in real time** — an AI guide that not only teaches you concepts but has read every page of the book and remembers it all. 💬
 
-This book was created through a meticulous process combining academic rigor with practical implementation. Each chapter was carefully researched, written, and tested to ensure the highest quality and accuracy. The entire process took 18 months from initial concept to final publication, with continuous feedback from robotics professionals and AI researchers.
+That's exactly what this is:
 
-The creation journey included:
-- **Research Phase**: Extensive research into current state of humanoid robotics and Physical AI technologies
-- **Conceptualization**: Developing the structure and approach to make complex topics accessible
-- **Technical Writing**: Detailed documentation of ROS 2, simulation environments, and AI integration
-- **Testing & Validation**: Real-world testing of all examples and code snippets for accuracy
+> A **cutting-edge interactive learning platform** on Humanoid Robotics & Physical AI, powered by Docusaurus, intelligent vector search, and Gemini 2.0 Flash — all packaged as a beautiful, browsable book.
 
-## Overview
+Humanoid robots are no longer science fiction. **Boston Dynamics** is selling them. **NVIDIA Isaac** is powering them. **Figure AI** and **Tesla Optimus** are deploying them. The Physical AI revolution is happening now — and yet most developers have no clear path to learn it.
 
-This premium, professional book covers advanced topics in robotics, AI, and Physical AI with a focus on humanoid robotics. The book is structured in four core modules:
+**So I built one.** 🛠️
 
-1. **The Robotic Nervous System (ROS 2)** - Fundamentals of ROS 2 architecture and communication
-2. **The Digital Twin (Gazebo & Unity)** - Simulation environments and digital twin concepts
-3. **The AI-Robot Brain (NVIDIA Isaac)** - AI and robotics integration with NVIDIA Isaac platform
-4. **Vision-Language-Action (VLA) + Capstone** - Advanced integration and capstone project
+---
 
-## Getting Started
+## 🧠 Why This Matters
+
+Traditional textbooks are **static**. You read… but you can't interact.
+
+What if instead, you could:
+
+| Old Way | This Book |
+|---------|-----------|
+| 📄 Read a PDF and hope | 💬 Ask your AI guide anything |
+| 🔍 Google every concept | 🎯 Get answers grounded in the actual book |
+| 😴 Passive learning | ⚡ Interactive simulations & real-time Q&A |
+| 🇬🇧 English only | 🌍 English + Urdu support |
+
+**Learning just went from passive → interactive!** 🎉
+
+---
+
+## ✨ Core Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🤖 AI Chatbot (RAG-Powered)
+Ask complex robotics questions and get context-aware answers drawn directly from the book — not hallucinations.
+
+</td>
+<td width="50%">
+
+### ⚙️ Interactive Simulations
+Explore trajectory planning, inverse kinematics, and sensor fusion through browser-native physics simulations.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📚 4 Structured Modules
+Clean, real-world robotics topics organized from fundamentals to advanced AI integration.
+
+</td>
+<td width="50%">
+
+### 🌐 Multilingual Support
+Learn in both **English** and **Urdu** — making advanced robotics accessible beyond language barriers.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📱 Fully Responsive UI
+Beautiful on desktop, tablet, and phone. Read on any device, anywhere.
+
+</td>
+<td width="50%">
+
+### ⚡ Deployed & Always Live
+Hosted on Vercel for fast, global access — no setup required for readers.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📖 What You'll Learn
+
+Whether you're a beginner or an advanced developer, this book guides you through a complete journey:
+
+```
+Module 1 → The Robotic Nervous System (ROS 2)
+           └── Architecture · DDS · Topics · Services · Actions
+
+Module 2 → The Digital Twin (Gazebo & Unity)
+           └── Simulation · Virtual Testing · Digital Twin Concepts
+
+Module 3 → The AI-Robot Brain (NVIDIA Isaac)
+           └── Perception · PyTorch · OpenCV · Intelligent Control
+
+Module 4 → Vision-Language-Action + Capstone
+           └── Transformers · End-to-End AI · Real-World Integration
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Frontend** | Docusaurus 3 · React · CSS Animations |
+| **AI / ML** | Gemini 2.0 Flash Lite · Cohere Embeddings |
+| **Vector Search** | Qdrant Cloud (RAG retrieval) |
+| **Backend** | FastAPI · Python · Vercel Serverless |
+| **Deployment** | Vercel · GitHub Actions |
+| **Methodology** | Spec-Driven Development (SDD) |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Python 3.11+
+- API Keys: Gemini · Cohere · Qdrant
+
+### Run the Frontend
 
 ```bash
+# Clone the repo
+git clone https://github.com/asadshabir/Humanoid-Robotic-Book.git
+cd Humanoid-Robotic-Book
+
 # Install dependencies
 npm install
 
-# Start development server
+# Start dev server → http://localhost:3000
 npm start
-
-# Build for production
-npm run build
 ```
 
-## Contributing
+### Run the RAG Backend
 
-This project follows the Spec-Kit Plus methodology with traceable requirements from specification through implementation.
+```bash
+cd backend
 
-## Connect with the Author
+# Install Python dependencies
+pip install fastapi uvicorn python-dotenv qdrant-client cohere google-generativeai
 
-- [LinkedIn](https://www.linkedin.com/in/asad-shabir-programmer110/)
-- [GitHub](https://github.com/asadshabir/)
-- [Portfolio](https://asadshabir.netlify.app/)
-- [Facebook](https://www.facebook.com/Asadalibhatti110)
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your keys (see below)
 
-## License
+# Start the API → http://localhost:8000
+python api_main.py
 
-This book is licensed for educational and research purposes."# Humaniod-robotic-book" 
+# Swagger docs → http://localhost:8000/docs
+```
+
+### Environment Variables
+
+```env
+COHERE_API_KEY=your_cohere_key
+GEMINI_API_KEY=your_gemini_key
+QDRANT_URL=your_qdrant_cluster_url
+QDRANT_API_KEY=your_qdrant_key
+```
+
+---
+
+## 🏗️ Project Architecture
+
+```
+Humanoid-Robotic-Book/
+│
+├── 📚 docs/                        # Book chapters (Markdown)
+│   ├── robotic-nervous-system/     # Module 1: ROS 2
+│   ├── digital-twin/               # Module 2: Gazebo & Unity
+│   ├── ai-robot-brain/             # Module 3: NVIDIA Isaac
+│   └── vla-capstone/               # Module 4: VLA Integration
+│
+├── ⚛️  src/
+│   ├── components/
+│   │   ├── Chatbot/                # RAG Chatbot (Gemini + Qdrant)
+│   │   ├── InteractiveSimulation/  # Physics simulations
+│   │   └── Homepage/               # Landing page components
+│   └── pages/
+│
+├── 🐍 backend/
+│   ├── api/index.py                # Vercel serverless handler
+│   ├── api_main.py                 # FastAPI RAG server
+│   └── agents/                     # AI agent pipeline
+│
+└── 📋 specs/                       # SDD artifacts (spec · plan · tasks)
+```
+
+---
+
+## 🌐 Live Demo
+
+**👉 Try it live right now:**
+
+> **[https://humaniod-robotic-book.vercel.app](https://humaniod-robotic-book.vercel.app)**
+
+Open the chatbot, ask it anything about humanoid robotics, and watch it pull context-aware answers straight from the book. 🤖
+
+---
+
+## 🙌 Contributing
+
+This project is built in the open. Contributions are welcome!
+
+```bash
+# Fork → Clone → Branch → Build → PR
+git checkout -b feat/your-feature-name
+git commit -m "feat: describe your change"
+git push origin feat/your-feature-name
+# Open a Pull Request on GitHub
+```
+
+**Ideas for contributions:**
+- 📝 Add or improve book chapters
+- 🌏 Add Urdu translations
+- 🔧 Improve the RAG chatbot accuracy
+- 🎨 Enhance UI components or simulations
+- 🐛 Report bugs via [GitHub Issues](https://github.com/asadshabir/Humanoid-Robotic-Book/issues)
+
+---
+
+## 👤 About the Author
+
+<table>
+<tr>
+<td width="70%">
+
+**Asad Shabir** — AI & Automation Engineer, Karachi 🇵🇰
+
+Three years building intelligent systems. Certified through **GIAIC** (Governor Initiative for AI, Web 3.0 & Metaverse). Obsessed with making AI accessible, practical, and powerful for everyone.
+
+**Connect:**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-asad--shabir-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/asad-shabir-programmer110/)
+[![GitHub](https://img.shields.io/badge/GitHub-asadshabir-181717?style=flat-square&logo=github)](https://github.com/asadshabir/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-asadshabir.netlify.app-00C896?style=flat-square)](https://asadshabir.netlify.app/)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📜 License
+
+Licensed for educational and research purposes. Content © Asad Shabir 2025–2026.
+
+---
+
+<div align="center">
+
+### ⭐ If this project helped you, give it a star!
+
+*Built to inspire the next generation of robotics engineers.*
+
+**The future is physical. The future is AI. The future is now.**
+
+🤖 · 🚀 · 🌍
+
+</div>

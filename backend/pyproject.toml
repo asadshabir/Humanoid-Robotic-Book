@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "humanoid-robotic-book-backend"
+version = "1.0.0"
+description = "RAG Backend API for Humanoid Robotics Book"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/asadshabir/Humanoid-Robotic-Book"
+Repository = "https://github.com/asadshabir/Humanoid-Robotic-Book"
+
+[tool.setuptools.packages.find]
+where = ["."]
