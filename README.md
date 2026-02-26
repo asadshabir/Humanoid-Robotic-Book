@@ -1,78 +1,154 @@
-# Physical AI & Humanoid Robotics Book
+# 🤖 Physical AI & Humanoid Robotics — Interactive Book
 
-![Creator Profile](static/img/hero/creator-profile.png)
+> *"What if learning robotics felt like living inside the future?"*
 
-This repository contains the source code for the "Physical AI & Humanoid Robotics" book built with Docusaurus.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Book-blue?style=for-the-badge)](https://physical-ai-book-asadshabir.vercel.app)
+[![Tech Stack](https://img.shields.io/badge/Built%20With-Docusaurus%20%2B%20RAG%20%2B%20Gemini-green?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/License-Educational-orange?style=for-the-badge)]()
 
-## About the Author
+---
 
-**Asad Shabir** is a certified **AI & Automation Engineer** and **Python Developer** based in Karachi, Pakistan. With over three years of hands-on coding experience, he specializes in building intelligent, scalable systems using modern AI and automation technologies.
+## The Story Behind This Book
 
-His work focuses on practical AI applications, automation workflows, and intelligent assistants that solve real-world problems. He actively builds AI agents, automation pipelines, and custom chatbots for productivity, research, and business use cases.
+It started with a question that refused to leave me alone: *Why is cutting-edge robotics knowledge locked inside dense PDFs and paywalled research papers?*
 
-### Core Expertise
-- **AI Agent Development**: Designing and deploying intelligent AI-powered agents using OpenAI Agents SDK and MCP-based architectures for research, automation, and knowledge retrieval.
-- **Workflow Automation**: Building end-to-end automation workflows using **n8n** to eliminate repetitive tasks, optimize operations, and increase efficiency.
-- **Custom Chatbots**: Developing tailored chatbots for customer support, lead generation, and multi-channel communication including Email and WhatsApp.
+Humanoid robots are no longer science fiction. **Boston Dynamics** is selling them. **NVIDIA Isaac** is powering them. **Figure AI** and **Tesla Optimus** are deploying them. The Physical AI revolution is here — and yet, most developers have no clear path to learn it.
 
-### Technical Stack
-- Python
-- OpenAI Agents SDK
-- MCP Servers
-- n8n Automation
-- Chainlit UI
-- SQLite
-- Docker (learning)
-- Kubernetes (learning)
+So I built one.
 
-### Key Achievements
-- **Pocket Buddy AI Assistant**: Built a multi-functional personal AI assistant with voice interaction, reminders, and web search capabilities.
-- **Business Automation Systems**: Designed automation systems that reduced human support workload through 24/7 AI-driven responses and content automation.
-- **Certified Professional**: Currently completing the **Governor Initiative (GIAIC)** certification in **AI, Web 3.0, and Metaverse**.
+This isn't just a documentation site. It's a **living, AI-powered textbook** — the kind I wish existed when I started. Every chapter is paired with an interactive simulation. Every concept is backed by a RAG-powered chatbot that answers your questions in real-time. Every module builds toward one goal: giving you the knowledge to build the next generation of intelligent machines.
 
-## Book Creation Journey
+---
 
-This book was created through a meticulous process combining academic rigor with practical implementation. Each chapter was carefully researched, written, and tested to ensure the highest quality and accuracy. The entire process took 18 months from initial concept to final publication, with continuous feedback from robotics professionals and AI researchers.
+## What Makes This Different
 
-The creation journey included:
-- **Research Phase**: Extensive research into current state of humanoid robotics and Physical AI technologies
-- **Conceptualization**: Developing the structure and approach to make complex topics accessible
-- **Technical Writing**: Detailed documentation of ROS 2, simulation environments, and AI integration
-- **Testing & Validation**: Real-world testing of all examples and code snippets for accuracy
+### 🧠 AI That Reads the Book With You
+An embedded **RAG (Retrieval-Augmented Generation) chatbot**, powered by **Gemini 2.0 Flash** and **Qdrant vector search**, lets you ask any question about the book's content and get precise, grounded answers — not hallucinations.
 
-## Overview
+### ⚙️ Interactive Physics Simulations
+No more reading about robotics without *feeling* it. Every key concept — trajectory planning, inverse kinematics, sensor fusion — comes with browser-native simulations you can manipulate in real time.
 
-This premium, professional book covers advanced topics in robotics, AI, and Physical AI with a focus on humanoid robotics. The book is structured in four core modules:
+### 📚 Four Modules. One Complete Journey.
 
-1. **The Robotic Nervous System (ROS 2)** - Fundamentals of ROS 2 architecture and communication
-2. **The Digital Twin (Gazebo & Unity)** - Simulation environments and digital twin concepts
-3. **The AI-Robot Brain (NVIDIA Isaac)** - AI and robotics integration with NVIDIA Isaac platform
-4. **Vision-Language-Action (VLA) + Capstone** - Advanced integration and capstone project
+| Module | Focus | Core Technologies |
+|--------|-------|-------------------|
+| **The Robotic Nervous System** | ROS 2 architecture & communication | ROS 2, DDS, Topics, Services, Actions |
+| **The Digital Twin** | Simulation & virtual testing | Gazebo, Unity Robotics Hub |
+| **The AI-Robot Brain** | Perception & intelligent control | NVIDIA Isaac, PyTorch, OpenCV |
+| **VLA + Capstone** | Vision-Language-Action integration | Transformers, End-to-End AI |
+
+---
+
+## Tech Stack
+
+```
+Frontend:   Docusaurus 3 · React · CSS Animations · Three.js Simulations
+Backend:    FastAPI · Python · Vercel Serverless Functions
+AI/ML:      Gemini 2.0 Flash Lite · Cohere Embeddings · Qdrant Vector DB
+Deployment: Vercel (Frontend + Backend) · GitHub Actions
+```
+
+---
 
 ## Getting Started
 
+### Prerequisites
+- Node.js 18+
+- Python 3.11+ (for backend)
+- API Keys: Gemini, Cohere, Qdrant
+
+### Run Locally
+
 ```bash
-# Install dependencies
+# Clone the repo
+git clone https://github.com/asadshabir/physical-ai-humanoid-robotics-book.git
+cd physical-ai-humanoid-robotics-book
+
+# Install frontend dependencies
 npm install
 
-# Start development server
+# Start the Docusaurus dev server
 npm start
-
-# Build for production
-npm run build
+# → http://localhost:3000
 ```
 
-## Contributing
+### Run the RAG Backend
 
-This project follows the Spec-Kit Plus methodology with traceable requirements from specification through implementation.
+```bash
+cd backend
 
-## Connect with the Author
+# Install Python dependencies
+pip install fastapi uvicorn python-dotenv qdrant-client cohere google-generativeai
+
+# Configure your API keys
+cp .env.example .env
+# Edit .env with your keys
+
+# Start the API server
+python api_main.py
+# → http://localhost:8000
+# → Swagger docs at http://localhost:8000/docs
+```
+
+### Environment Variables
+
+```env
+COHERE_API_KEY=your_cohere_key
+GEMINI_API_KEY=your_gemini_key
+QDRANT_URL=your_qdrant_cluster_url
+QDRANT_API_KEY=your_qdrant_key
+```
+
+---
+
+## Project Architecture
+
+```
+physical-ai-humanoid-robotics-book/
+├── docs/                          # Book content (Markdown chapters)
+│   ├── robotic-nervous-system/    # Module 1: ROS 2
+│   ├── digital-twin/              # Module 2: Gazebo & Unity
+│   ├── ai-robot-brain/            # Module 3: NVIDIA Isaac
+│   └── vla-capstone/              # Module 4: VLA Integration
+├── src/
+│   ├── components/
+│   │   ├── Chatbot/               # RAG Chatbot (Gemini + Qdrant)
+│   │   ├── InteractiveSimulation/ # Physics simulations
+│   │   └── Homepage/              # Landing page
+│   └── pages/
+├── backend/
+│   ├── api/index.py               # Vercel serverless handler
+│   └── api_main.py                # FastAPI RAG server
+└── specs/                         # Spec-Driven Development artifacts
+```
+
+---
+
+## About the Author
+
+**Asad Shabir** — AI & Automation Engineer, Karachi, Pakistan
+
+Three years building intelligent systems. Certified through **GIAIC** (Governor Initiative for AI & Computing). Obsessed with making AI accessible, practical, and powerful.
 
 - [LinkedIn](https://www.linkedin.com/in/asad-shabir-programmer110/)
 - [GitHub](https://github.com/asadshabir/)
 - [Portfolio](https://asadshabir.netlify.app/)
-- [Facebook](https://www.facebook.com/Asadalibhatti110)
+
+---
+
+## Built With Spec-Driven Development
+
+This project follows **SDD (Spec-Driven Development)** — every feature begins with a spec, goes through architectural planning, and is implemented with full traceability. All decisions are documented in `/specs/` and `/history/`.
+
+---
 
 ## License
 
-This book is licensed for educational and research purposes."# Humaniod-robotic-book" 
+Licensed for educational and research purposes. Content © Asad Shabir 2025–2026.
+
+---
+
+<p align="center">
+  <i>Built to inspire the next generation of robotics engineers.</i><br>
+  <b>The future is physical. The future is AI. The future is now.</b>
+</p>

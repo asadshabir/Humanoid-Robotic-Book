@@ -1,0 +1,128 @@
+Metadata-Version: 2.4
+Name: docusaurus-embedding-pipeline
+Version: 0.1.0
+Summary: Pipeline to extract text from Docusaurus URLs, generate embeddings using Cohere, and store in Qdrant
+Project-URL: Homepage, https://github.com/your-organization/docusaurus-embedding-pipeline
+Project-URL: Repository, https://github.com/your-organization/docusaurus-embedding-pipeline
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31.0
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: cohere>=4.0.0
+Requires-Dist: qdrant-client>=1.8.0
+Requires-Dist: python-dotenv>=1.0.0
+
+# Docusaurus Embedding Pipeline
+
+This pipeline extracts text from deployed Docusaurus URLs, generates embeddings using Cohere, and stores them in Qdrant for RAG-based retrieval.
+
+## Features
+
+- **URL Crawling**: Automatically discovers all documentation pages on a Docusaurus site
+- **Text Extraction**: Extracts clean, relevant content while filtering out navigation and UI elements
+- **Content Chunking**: Splits large documents into manageable chunks with overlap
+- **Embedding Generation**: Uses Cohere's powerful embedding models
+- **Vector Storage**: Stores embeddings in Qdrant for efficient similarity search
+- **Robust Processing**: Handles errors gracefully and respects robots.txt
+
+## Prerequisites
+
+- Python 3.11+
+- Cohere API key
+- Qdrant Cloud account or local instance
+
+## Setup
+
+1. Clone the repository and navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies using pip (UV is recommended but pip works too):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Create your environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+5. Edit `.env` and add your API keys:
+   ```bash
+   # Edit the .env file to include your actual keys
+   ```
+
+## Configuration
+
+The pipeline can be configured through environment variables in your `.env` file:
+
+- `COHERE_API_KEY`: Your Cohere API key
+- `QDRANT_URL`: Your Qdrant instance URL
+- `QDRANT_API_KEY`: (Optional) Qdrant authentication key
+- `TARGET_URL`: The Docusaurus site to process (default: https://physical-ai-humanoid-robotics-book01.vercel.app/)
+- `CRAWL_MAX_DEPTH`: Maximum depth for URL crawling (default: 2)
+- `CRAWL_RATE_LIMIT_DELAY`: Delay between requests in seconds (default: 1.0)
+- `COHERE_MODEL`: Cohere model to use (default: embed-multilingual-v2.0)
+- `CHUNK_SIZE`: Size of text chunks (default: 1000)
+- `CHUNK_OVERLAP`: Overlap between chunks (default: 100)
+- `EMBED_BATCH_SIZE`: Batch size for embedding requests (default: 96)
+
+## Usage
+
+Run the pipeline:
+
+```bash
+python main.py
+```
+
+The pipeline will:
+1. Crawl the target Docusaurus site to find all documentation URLs
+2. Extract clean text content from each page
+3. Chunk the text into manageable pieces
+4. Generate vector embeddings using Cohere
+5. Store the embeddings in Qdrant
+
+## Output
+
+The pipeline will create a collection named `rag_embedding` in your Qdrant instance containing:
+- The text content
+- Source URL
+- Chunk position
+- Vector embeddings
+
+## Architecture
+
+The pipeline consists of these main functions in `main.py`:
+
+- `get_all_urls()`: Discovers all documentation URLs on the site
+- `extract_text_from_url()`: Extracts clean text content from a single URL
+- `chunk_text()`: Splits large documents into smaller chunks
+- `embed_text()`: Generates embeddings using Cohere
+- `create_collection()`: Sets up the Qdrant collection
+- `save_chunk_to_qdrant()`: Stores embeddings in Qdrant
+- `main()`: Orchestrates the complete pipeline
+
+## API Usage Tracking
+
+The pipeline tracks API usage statistics:
+- Total characters processed
+- Total requests made
+- Total embeddings generated
+
+These statistics are displayed when the pipeline completes.
+
+## Error Handling
+
+The pipeline includes comprehensive error handling:
+- Graceful handling of inaccessible URLs
+- Robust text extraction that handles various Docusaurus layouts
+- Rate limiting to respect server resources
+- Robots.txt compliance
+- Retry mechanisms for API failures

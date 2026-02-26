@@ -1,0 +1,133 @@
+# API Contracts: Qdrant Retrieval Validation
+
+## Endpoints
+
+### POST /validate-retrieval
+Run a single retrieval validation test
+
+**Request:**
+```json
+{
+  "query": "string (required): The search query text",
+  "top_k": "integer (optional, default: 5): Number of results to retrieve"
+}
+```
+
+**Response:**
+```json
+{
+  "query": "string: Original query text",
+  "top_k": "integer: Number of results requested",
+  "results_found": "boolean: Whether results were returned",
+  "num_results": "integer: Number of results returned",
+  "results": [
+    {
+      "id": "integer: Unique identifier of the stored chunk",
+      "score": "float: Similarity score between query and result",
+      "payload": {
+        "url": "string: Source URL of the content",
+        "text": "string: Original text content"
+      }
+    }
+  ],
+  "metadata_validation": {
+    "total_results": "integer: Total number of results",
+    "metadata_validation_passed": "boolean: Whether metadata validation passed",
+    "validation_details": [
+      {
+        "result_index": "integer: Index of the result",
+        "id": "integer: Result ID",
+        "metadata_present": "boolean: Whether metadata is present",
+        "required_fields_present": "boolean: Whether required fields are present",
+        "field_validations": {
+          "url": {
+            "field": "string: Field name",
+            "present": "boolean: Whether field is present",
+            "valid_type": "boolean: Whether field has valid type and content",
+            "value_length": "integer: Length of field value"
+          },
+          "text": {
+            "field": "string: Field name",
+            "present": "boolean: Whether field is present",
+            "valid_type": "boolean: Whether field has valid type and content",
+            "value_length": "integer: Length of field value"
+          }
+        },
+        "missing_fields": "array<string>: List of missing fields"
+      }
+    ]
+  },
+  "text_validation": {
+    "total_results": "integer: Total number of results",
+    "text_accuracy_passed": "boolean: Whether text accuracy validation passed",
+    "semantic_relevance_passed": "boolean: Whether semantic relevance validation passed",
+    "validation_details": [
+      {
+        "result_index": "integer: Index of the result",
+        "id": "integer: Result ID",
+        "text_length_valid": "boolean: Whether text length is valid",
+        "text_content_valid": "boolean: Whether text content is valid",
+        "semantic_relevance_score": "float: Relevance score (0-1)",
+        "relevance_comment": "string: Comment about relevance"
+      }
+    ]
+  },
+  "success": "boolean: Whether the test was successful"
+}
+```
+
+### POST /run-validation-suite
+Run a comprehensive validation suite with multiple test queries
+
+**Request:**
+```json
+{
+  "test_queries": "array<string> (required): List of query strings to test",
+  "top_k": "integer (optional, default: 5): Number of results to retrieve for each query"
+}
+```
+
+**Response:**
+```json
+{
+  "test_summary": {
+    "total_queries": "integer: Total number of queries tested",
+    "successful_queries": "integer: Number of successful queries",
+    "failed_queries": "integer: Number of failed queries",
+    "success_rate": "float: Success rate as decimal (0-1)"
+  },
+  "test_results": "array<ValidationResult>: Individual test results",
+  "overall_validation": {
+    "all_tests_passed": "boolean: Whether all tests passed",
+    "metadata_integrity_ok": "boolean: Metadata validation status",
+    "text_accuracy_ok": "boolean: Text content validation status",
+    "semantic_relevance_ok": "boolean: Semantic relevance status"
+  }
+}
+```
+
+## Common Error Responses
+
+### 400 Bad Request
+```json
+{
+  "error": "string: Error message",
+  "details": "object: Additional error details"
+}
+```
+
+### 500 Internal Server Error
+```json
+{
+  "error": "string: Error message",
+  "code": "string: Error code"
+}
+```
+
+## Validation Rules
+
+1. All string fields must be non-empty unless explicitly marked as optional
+2. All numeric fields must be within valid ranges
+3. URLs must follow standard URL format
+4. Scores must be between 0 and 1
+5. top_k must be between 1 and 100

@@ -77,7 +77,14 @@ Many physical tasks require high precision that can only be achieved through con
 
 ### Proportional-Integral-Derivative (PID) Control
 
-PID control is the most widely used control technique in Physical AI systems:
+PID control is the most widely used control technique in Physical AI systems. Try the interactive simulation below to see how adjusting the Proportional Gain ($K_p$) affects system stability:
+
+import InteractiveSimulation from '@site/src/components/InteractiveSimulation';
+
+<InteractiveSimulation
+  type="pid"
+  title="Interactive PID P-Controller Simulator"
+/>
 
 #### Proportional (P) Control
 - **Function**: Generates control action proportional to current error

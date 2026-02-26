@@ -1,0 +1,274 @@
+/* Premium Floating Chatbot Button - Cosmic Animated Design */
+
+.floatingButton {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg,
+    rgba(79, 70, 229, 1) 0%,
+    rgba(124, 58, 237, 1) 50%,
+    rgba(34, 211, 238, 1) 100%
+  );
+  color: white;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999 !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  overflow: visible;
+  box-shadow:
+    0 8px 32px rgba(79, 70, 229, 0.6),
+    0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+    0 0 60px rgba(124, 58, 237, 0.4),
+    0 0 100px rgba(34, 211, 238, 0.2);
+  animation: breatheGlow 3s ease-in-out infinite;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Breathing Glow Animation */
+@keyframes breatheGlow {
+  0%, 100% {
+    box-shadow:
+      0 8px 32px rgba(79, 70, 229, 0.6),
+      0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+      0 0 60px rgba(124, 58, 237, 0.4),
+      0 0 100px rgba(34, 211, 238, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 16px 48px rgba(79, 70, 229, 0.7),
+      0 0 0 2px rgba(255, 255, 255, 0.25) inset,
+      0 0 80px rgba(124, 58, 237, 0.6),
+      0 0 120px rgba(34, 211, 238, 0.4);
+  }
+}
+
+/* Glowing Aura Ring */
+.floatingButton::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 24px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(79, 70, 229, 0.4) 0deg,
+    rgba(34, 211, 238, 0.4) 120deg,
+    rgba(245, 199, 122, 0.4) 240deg,
+    rgba(79, 70, 229, 0.4) 360deg
+  );
+  filter: blur(12px);
+  opacity: 0.6;
+  animation: rotateAura 8s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotateAura {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Inner Shimmer Effect */
+.floatingButton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.15) 100%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.floatingButton:hover {
+  transform: translateY(-8px) scale(1.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 16px 40px rgba(79, 70, 229, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    0 0 80px rgba(124, 58, 237, 0.5),
+    0 0 120px rgba(34, 211, 238, 0.4);
+}
+
+.floatingButton:hover::after {
+  opacity: 1;
+}
+
+.floatingButton:hover::before {
+  opacity: 0.8;
+  filter: blur(16px);
+}
+
+.floatingButton:active {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.floatingButton.open {
+  background: linear-gradient(135deg,
+    rgba(34, 211, 238, 1) 0%,
+    rgba(79, 70, 229, 1) 100%
+  );
+  color: white;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  box-shadow:
+    0 12px 32px rgba(34, 211, 238, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    0 0 60px rgba(34, 211, 238, 0.4);
+}
+
+.floatingButton.open:hover {
+  transform: rotate(180deg) scale(1.15);
+  box-shadow:
+    0 20px 48px rgba(34, 211, 238, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset,
+    0 0 100px rgba(34, 211, 238, 0.5);
+}
+
+.floatingButton.hidden {
+  transform: translateY(20px) scale(0.9);
+  opacity: 0.6;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+}
+
+/* Continuous Wave Animation */
+.floatingButton.pulse {
+  animation: buttonWave 2s ease-in-out infinite;
+}
+
+@keyframes buttonWave {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    border-radius: 20px;
+  }
+  25% {
+    transform: translateY(-4px) scale(1.03);
+    border-radius: 22px;
+  }
+  75% {
+    transform: translateY(2px) scale(0.98);
+    border-radius: 18px;
+  }
+}
+
+/* Bounce Animation */
+.floatingButton.boing {
+  animation: buttonBoing 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes buttonBoing {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-16px) scale(1.15);
+  }
+  50% {
+    transform: translateY(0) scale(0.95);
+  }
+  75% {
+    transform: translateY(-8px) scale(1.05);
+  }
+}
+
+.notificationBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg,
+    rgba(220, 38, 38, 1),
+    rgba(239, 68, 68, 1)
+  );
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 2;
+  animation: badgePulse 2s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+}
+
+.buttonContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: subtleBounce 4s ease-in-out infinite;
+}
+
+@keyframes subtleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.iconWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 1.75rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.hiddenIcon {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+  pointer-events: none;
+}
+
+/* Responsive Sizes */
+@media (max-width: 768px) {
+  .floatingButton {
+    width: 64px;
+    height: 64px;
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .iconWrapper {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .floatingButton {
+    width: 56px;
+    height: 56px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .iconWrapper {
+    font-size: 1.25rem;
+  }
+
+  .notificationBadge {
+    width: 12px;
+    height: 12px;
+    top: 6px;
+    right: 6px;
+  }
+}

@@ -1,0 +1,132 @@
+.simulationContainer {
+  background: var(--ifm-color-surface);
+  border: var(--cartoon-border-width) solid var(--ifm-color-primary);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-3d-stack);
+  animation: fadeInUp 0.8s var(--ifm-animation-easing-bounce);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s var(--ifm-animation-easing-elastic);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.simulationContainer:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-3d-stack), var(--shadow-glow);
+}
+
+.simulationContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+  border-radius: 20px 20px 0 0;
+}
+
+.simulationContainer::after {
+  content: 'DIAGNOSTIC MODE';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.6rem;
+  color: var(--ifm-color-primary);
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+  animation: subtleBounce 3s var(--ifm-animation-easing-bounce) infinite;
+}
+
+@keyframes subtleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.simulationTitle {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.simulationTitle::before {
+  content: '🤖';
+}
+
+.simulationVisual {
+  background: #050505;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--ifm-color-primary-darker);
+  box-shadow: inset 0 0 20px rgba(59, 130, 246, 0.2);
+  position: relative;
+}
+
+.simulationVisual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: contrast(110%) brightness(110%);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px dashed var(--ifm-color-primary-lighter);
+}
+
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.controlGroup label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.controlGroup input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: var(--ifm-color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+[data-theme='dark'] .simulationContainer {
+  background: var(--ifm-color-neutral-900);
+}

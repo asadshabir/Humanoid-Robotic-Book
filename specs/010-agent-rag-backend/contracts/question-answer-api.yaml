@@ -1,0 +1,133 @@
+openapi: 3.0.0
+info:
+  title: Agent-based RAG Backend API
+  version: 1.0.0
+  description: API for question answering using OpenAI agent with Qdrant retrieval
+
+paths:
+  /api/v1/question-answer:
+    post:
+      summary: Answer a question using the RAG agent
+      description: Submits a question to the RAG agent which retrieves relevant information from Qdrant and generates an answer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuestionRequest'
+      responses:
+        '200':
+          description: Successful response with the agent's answer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentResponse'
+        '400':
+          description: Bad request - invalid input parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    QuestionRequest:
+      type: object
+      properties:
+        query:
+          type: string
+          description: The user's question
+          example: "What are the key principles of humanoid robot balance control?"
+        max_results:
+          type: integer
+          description: Maximum number of results to retrieve (default: 5)
+          minimum: 1
+          maximum: 10
+          default: 5
+        confidence_threshold:
+          type: number
+          description: Minimum confidence score for retrieved results (default: 0.7)
+          minimum: 0.0
+          maximum: 1.0
+          default: 0.7
+      required:
+        - query
+
+    AgentResponse:
+      type: object
+      properties:
+        answer:
+          type: string
+          description: The agent's response to the question
+          example: "The key principles of humanoid robot balance control include..."
+        sources:
+          type: array
+          items:
+            $ref: '#/components/schemas/SourceInfo'
+          description: List of sources used to generate the answer
+        confidence:
+          type: number
+          description: Overall confidence score for the response
+          minimum: 0.0
+          maximum: 1.0
+          example: 0.85
+        tool_calls:
+          type: array
+          items:
+            $ref: '#/components/schemas/ToolCallInfo'
+          description: Information about tools called during processing
+
+    SourceInfo:
+      type: object
+      properties:
+        url:
+          type: string
+          description: URL of the source document
+          format: uri
+          example: "https://example.com/humanoid-robotics/balance-control"
+        content:
+          type: string
+          description: The text content that was used
+          example: "Balance control in humanoid robots relies on feedback control systems..."
+        score:
+          type: number
+          description: Relevance score from the retrieval
+          minimum: 0.0
+          maximum: 1.0
+          example: 0.92
+        chunk_id:
+          type: string
+          description: Identifier for the specific chunk
+          example: "chunk_12345"
+
+    ToolCallInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the tool called
+          example: "qdrant_retrieval"
+        arguments:
+          type: object
+          description: Arguments passed to the tool
+        result:
+          type: object
+          description: Result returned by the tool
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: "Invalid query parameter"
+        code:
+          type: string
+          description: Error code
+          example: "INVALID_INPUT"

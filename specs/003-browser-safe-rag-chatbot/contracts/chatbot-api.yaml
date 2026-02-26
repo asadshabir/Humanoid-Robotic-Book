@@ -1,0 +1,108 @@
+openapi: 3.0.0
+info:
+  title: RAG Chatbot API
+  description: API for the RAG-based chatbot functionality
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Development server
+  - url: https://api.example.com
+    description: Production server
+
+paths:
+  /api/v1/question-answer:
+    post:
+      summary: Ask a question and get an answer with sources
+      description: Submit a question to the RAG system and receive an answer with supporting sources
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuestionRequest'
+      responses:
+        '200':
+          description: Successful response with answer and sources
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad request - invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    QuestionRequest:
+      type: object
+      required:
+        - question
+      properties:
+        question:
+          type: string
+          description: The question to ask
+          example: "What is the main concept of Physical AI?"
+        context:
+          type: string
+          description: Optional context to provide additional information
+          example: "This is from the introduction chapter about Physical AI concepts"
+
+    ApiResponse:
+      type: object
+      required:
+        - answer
+        - sources
+        - success
+      properties:
+        answer:
+          type: string
+          description: The answer from the RAG system
+          example: "Physical AI is a field that combines artificial intelligence with physical systems..."
+        sources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Source'
+          description: List of sources used to generate the answer
+        success:
+          type: boolean
+          description: Whether the request was successful
+          example: true
+        error:
+          type: string
+          description: Error message if success is false
+          example: "The backend service is temporarily unavailable"
+
+    Source:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the source document
+          example: "Introduction to Physical AI"
+        url:
+          type: string
+          description: URL or path to the source
+          example: "/docs/physical-ai-foundations/what-is-physical-ai"
+        content:
+          type: string
+          description: Excerpt from the source
+          example: "Physical AI represents a paradigm shift from traditional digital AI..."
+
+    ErrorResponse:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: "Invalid request parameters"

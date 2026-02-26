@@ -13,15 +13,16 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://asadshabir.github.io',
+  url: 'https://physical-ai-book-asadshabir.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
-  baseUrl: '/Humanoid-Robotic-Book/',
+  baseUrl: '/',
 
   // Custom fields for chatbot configuration
+  // Note: For production, deploy the backend separately and update the URL
   customFields: {
     chatbot: {
-      backendUrl: 'http://localhost:8000', // Default for local development
+      // Production backend URL - Vercel Serverless Functions
+      backendUrl: 'https://backend-658gfqzs3-asadshabirs-projects.vercel.app',
       enabled: true,
       timeout: 30000,
       maxRetries: 2
@@ -51,7 +52,17 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'ur'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+      ur: {
+        label: 'اردو',
+        direction: 'rtl',
+      },
+    },
   },
 
   presets: [
@@ -73,11 +84,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Color mode configuration with accessibility compliance
+      // Color mode configuration - Dark mode default for premium experience
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: 'dark',
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
