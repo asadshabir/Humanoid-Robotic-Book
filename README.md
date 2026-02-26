@@ -1,75 +1,154 @@
-# 🤖 Physical AI & Humanoid Robotics — Interactive Book
+<div align="center">
 
-> *"What if learning robotics felt like living inside the future?"*
+# 🚀 Physical AI & Humanoid Robotics Book
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Book-blue?style=for-the-badge)](https://physical-ai-book-asadshabir.vercel.app)
-[![Tech Stack](https://img.shields.io/badge/Built%20With-Docusaurus%20%2B%20RAG%20%2B%20Gemini-green?style=for-the-badge)]()
-[![License](https://img.shields.io/badge/License-Educational-orange?style=for-the-badge)]()
+### *A living, interactive AI-powered textbook built for learners of tomorrow* 🤖📘
 
----
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Now-4A90E2?style=for-the-badge)](https://humaniod-robotic-book.vercel.app)
+[![RAG Powered](https://img.shields.io/badge/🧠%20Powered%20By-RAG%20%2B%20Gemini%202.0-8A2BE2?style=for-the-badge)]()
+[![Built With](https://img.shields.io/badge/⚡%20Built%20With-Docusaurus%20%2B%20FastAPI-00C896?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/📜%20License-Educational-F5A623?style=for-the-badge)]()
 
-## The Story Behind This Book
+<br/>
 
-It started with a question that refused to leave me alone: *Why is cutting-edge robotics knowledge locked inside dense PDFs and paywalled research papers?*
+> *"What if your textbook could actually talk back to you?"*
 
-Humanoid robots are no longer science fiction. **Boston Dynamics** is selling them. **NVIDIA Isaac** is powering them. **Figure AI** and **Tesla Optimus** are deploying them. The Physical AI revolution is here — and yet, most developers have no clear path to learn it.
-
-So I built one.
-
-This isn't just a documentation site. It's a **living, AI-powered textbook** — the kind I wish existed when I started. Every chapter is paired with an interactive simulation. Every concept is backed by a RAG-powered chatbot that answers your questions in real-time. Every module builds toward one goal: giving you the knowledge to build the next generation of intelligent machines.
+</div>
 
 ---
 
-## What Makes This Different
+## 🎯 What Is This Project?
 
-### 🧠 AI That Reads the Book With You
-An embedded **RAG (Retrieval-Augmented Generation) chatbot**, powered by **Gemini 2.0 Flash** and **Qdrant vector search**, lets you ask any question about the book's content and get precise, grounded answers — not hallucinations.
+Imagine a robotics textbook that **can answer your questions in real time** — an AI guide that not only teaches you concepts but has read every page of the book and remembers it all. 💬
 
-### ⚙️ Interactive Physics Simulations
-No more reading about robotics without *feeling* it. Every key concept — trajectory planning, inverse kinematics, sensor fusion — comes with browser-native simulations you can manipulate in real time.
+That's exactly what this is:
 
-### 📚 Four Modules. One Complete Journey.
+> A **cutting-edge interactive learning platform** on Humanoid Robotics & Physical AI, powered by Docusaurus, intelligent vector search, and Gemini 2.0 Flash — all packaged as a beautiful, browsable book.
 
-| Module | Focus | Core Technologies |
-|--------|-------|-------------------|
-| **The Robotic Nervous System** | ROS 2 architecture & communication | ROS 2, DDS, Topics, Services, Actions |
-| **The Digital Twin** | Simulation & virtual testing | Gazebo, Unity Robotics Hub |
-| **The AI-Robot Brain** | Perception & intelligent control | NVIDIA Isaac, PyTorch, OpenCV |
-| **VLA + Capstone** | Vision-Language-Action integration | Transformers, End-to-End AI |
+Humanoid robots are no longer science fiction. **Boston Dynamics** is selling them. **NVIDIA Isaac** is powering them. **Figure AI** and **Tesla Optimus** are deploying them. The Physical AI revolution is happening now — and yet most developers have no clear path to learn it.
+
+**So I built one.** 🛠️
 
 ---
 
-## Tech Stack
+## 🧠 Why This Matters
+
+Traditional textbooks are **static**. You read… but you can't interact.
+
+What if instead, you could:
+
+| Old Way | This Book |
+|---------|-----------|
+| 📄 Read a PDF and hope | 💬 Ask your AI guide anything |
+| 🔍 Google every concept | 🎯 Get answers grounded in the actual book |
+| 😴 Passive learning | ⚡ Interactive simulations & real-time Q&A |
+| 🇬🇧 English only | 🌍 English + Urdu support |
+
+**Learning just went from passive → interactive!** 🎉
+
+---
+
+## ✨ Core Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🤖 AI Chatbot (RAG-Powered)
+Ask complex robotics questions and get context-aware answers drawn directly from the book — not hallucinations.
+
+</td>
+<td width="50%">
+
+### ⚙️ Interactive Simulations
+Explore trajectory planning, inverse kinematics, and sensor fusion through browser-native physics simulations.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📚 4 Structured Modules
+Clean, real-world robotics topics organized from fundamentals to advanced AI integration.
+
+</td>
+<td width="50%">
+
+### 🌐 Multilingual Support
+Learn in both **English** and **Urdu** — making advanced robotics accessible beyond language barriers.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📱 Fully Responsive UI
+Beautiful on desktop, tablet, and phone. Read on any device, anywhere.
+
+</td>
+<td width="50%">
+
+### ⚡ Deployed & Always Live
+Hosted on Vercel for fast, global access — no setup required for readers.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📖 What You'll Learn
+
+Whether you're a beginner or an advanced developer, this book guides you through a complete journey:
 
 ```
-Frontend:   Docusaurus 3 · React · CSS Animations · Three.js Simulations
-Backend:    FastAPI · Python · Vercel Serverless Functions
-AI/ML:      Gemini 2.0 Flash Lite · Cohere Embeddings · Qdrant Vector DB
-Deployment: Vercel (Frontend + Backend) · GitHub Actions
+Module 1 → The Robotic Nervous System (ROS 2)
+           └── Architecture · DDS · Topics · Services · Actions
+
+Module 2 → The Digital Twin (Gazebo & Unity)
+           └── Simulation · Virtual Testing · Digital Twin Concepts
+
+Module 3 → The AI-Robot Brain (NVIDIA Isaac)
+           └── Perception · PyTorch · OpenCV · Intelligent Control
+
+Module 4 → Vision-Language-Action + Capstone
+           └── Transformers · End-to-End AI · Real-World Integration
 ```
 
 ---
 
-## Getting Started
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Frontend** | Docusaurus 3 · React · CSS Animations |
+| **AI / ML** | Gemini 2.0 Flash Lite · Cohere Embeddings |
+| **Vector Search** | Qdrant Cloud (RAG retrieval) |
+| **Backend** | FastAPI · Python · Vercel Serverless |
+| **Deployment** | Vercel · GitHub Actions |
+| **Methodology** | Spec-Driven Development (SDD) |
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js 18+
-- Python 3.11+ (for backend)
-- API Keys: Gemini, Cohere, Qdrant
+- Python 3.11+
+- API Keys: Gemini · Cohere · Qdrant
 
-### Run Locally
+### Run the Frontend
 
 ```bash
 # Clone the repo
-git clone https://github.com/asadshabir/physical-ai-humanoid-robotics-book.git
-cd physical-ai-humanoid-robotics-book
+git clone https://github.com/asadshabir/Humanoid-Robotic-Book.git
+cd Humanoid-Robotic-Book
 
-# Install frontend dependencies
+# Install dependencies
 npm install
 
-# Start the Docusaurus dev server
+# Start dev server → http://localhost:3000
 npm start
-# → http://localhost:3000
 ```
 
 ### Run the RAG Backend
@@ -80,14 +159,14 @@ cd backend
 # Install Python dependencies
 pip install fastapi uvicorn python-dotenv qdrant-client cohere google-generativeai
 
-# Configure your API keys
+# Set up environment variables
 cp .env.example .env
-# Edit .env with your keys
+# Edit .env with your keys (see below)
 
-# Start the API server
+# Start the API → http://localhost:8000
 python api_main.py
-# → http://localhost:8000
-# → Swagger docs at http://localhost:8000/docs
+
+# Swagger docs → http://localhost:8000/docs
 ```
 
 ### Environment Variables
@@ -101,54 +180,100 @@ QDRANT_API_KEY=your_qdrant_key
 
 ---
 
-## Project Architecture
+## 🏗️ Project Architecture
 
 ```
-physical-ai-humanoid-robotics-book/
-├── docs/                          # Book content (Markdown chapters)
-│   ├── robotic-nervous-system/    # Module 1: ROS 2
-│   ├── digital-twin/              # Module 2: Gazebo & Unity
-│   ├── ai-robot-brain/            # Module 3: NVIDIA Isaac
-│   └── vla-capstone/              # Module 4: VLA Integration
-├── src/
+Humanoid-Robotic-Book/
+│
+├── 📚 docs/                        # Book chapters (Markdown)
+│   ├── robotic-nervous-system/     # Module 1: ROS 2
+│   ├── digital-twin/               # Module 2: Gazebo & Unity
+│   ├── ai-robot-brain/             # Module 3: NVIDIA Isaac
+│   └── vla-capstone/               # Module 4: VLA Integration
+│
+├── ⚛️  src/
 │   ├── components/
-│   │   ├── Chatbot/               # RAG Chatbot (Gemini + Qdrant)
-│   │   ├── InteractiveSimulation/ # Physics simulations
-│   │   └── Homepage/              # Landing page
+│   │   ├── Chatbot/                # RAG Chatbot (Gemini + Qdrant)
+│   │   ├── InteractiveSimulation/  # Physics simulations
+│   │   └── Homepage/               # Landing page components
 │   └── pages/
-├── backend/
-│   ├── api/index.py               # Vercel serverless handler
-│   └── api_main.py                # FastAPI RAG server
-└── specs/                         # Spec-Driven Development artifacts
+│
+├── 🐍 backend/
+│   ├── api/index.py                # Vercel serverless handler
+│   ├── api_main.py                 # FastAPI RAG server
+│   └── agents/                     # AI agent pipeline
+│
+└── 📋 specs/                       # SDD artifacts (spec · plan · tasks)
 ```
 
 ---
 
-## About the Author
+## 🌐 Live Demo
 
-**Asad Shabir** — AI & Automation Engineer, Karachi, Pakistan
+**👉 Try it live right now:**
 
-Three years building intelligent systems. Certified through **GIAIC** (Governor Initiative for AI & Computing). Obsessed with making AI accessible, practical, and powerful.
+> **[https://humaniod-robotic-book.vercel.app](https://humaniod-robotic-book.vercel.app)**
 
-- [LinkedIn](https://www.linkedin.com/in/asad-shabir-programmer110/)
-- [GitHub](https://github.com/asadshabir/)
-- [Portfolio](https://asadshabir.netlify.app/)
+Open the chatbot, ask it anything about humanoid robotics, and watch it pull context-aware answers straight from the book. 🤖
 
 ---
 
-## Built With Spec-Driven Development
+## 🙌 Contributing
 
-This project follows **SDD (Spec-Driven Development)** — every feature begins with a spec, goes through architectural planning, and is implemented with full traceability. All decisions are documented in `/specs/` and `/history/`.
+This project is built in the open. Contributions are welcome!
+
+```bash
+# Fork → Clone → Branch → Build → PR
+git checkout -b feat/your-feature-name
+git commit -m "feat: describe your change"
+git push origin feat/your-feature-name
+# Open a Pull Request on GitHub
+```
+
+**Ideas for contributions:**
+- 📝 Add or improve book chapters
+- 🌏 Add Urdu translations
+- 🔧 Improve the RAG chatbot accuracy
+- 🎨 Enhance UI components or simulations
+- 🐛 Report bugs via [GitHub Issues](https://github.com/asadshabir/Humanoid-Robotic-Book/issues)
 
 ---
 
-## License
+## 👤 About the Author
+
+<table>
+<tr>
+<td width="70%">
+
+**Asad Shabir** — AI & Automation Engineer, Karachi 🇵🇰
+
+Three years building intelligent systems. Certified through **GIAIC** (Governor Initiative for AI, Web 3.0 & Metaverse). Obsessed with making AI accessible, practical, and powerful for everyone.
+
+**Connect:**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-asad--shabir-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/asad-shabir-programmer110/)
+[![GitHub](https://img.shields.io/badge/GitHub-asadshabir-181717?style=flat-square&logo=github)](https://github.com/asadshabir/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-asadshabir.netlify.app-00C896?style=flat-square)](https://asadshabir.netlify.app/)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📜 License
 
 Licensed for educational and research purposes. Content © Asad Shabir 2025–2026.
 
 ---
 
-<p align="center">
-  <i>Built to inspire the next generation of robotics engineers.</i><br>
-  <b>The future is physical. The future is AI. The future is now.</b>
-</p>
+<div align="center">
+
+### ⭐ If this project helped you, give it a star!
+
+*Built to inspire the next generation of robotics engineers.*
+
+**The future is physical. The future is AI. The future is now.**
+
+🤖 · 🚀 · 🌍
+
+</div>
