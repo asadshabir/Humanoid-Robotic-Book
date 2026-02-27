@@ -4,7 +4,7 @@
 
 ### *A living, interactive AI-powered textbook built for learners of tomorrow* 🤖📘
 
-[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Now-4A90E2?style=for-the-badge)](https://humaniod-robotic-book.vercel.app)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Now-4A90E2?style=for-the-badge)](https://physical-ai-book-asadshabir.vercel.app)
 [![RAG Powered](https://img.shields.io/badge/🧠%20Powered%20By-RAG%20%2B%20Gemini%202.0-8A2BE2?style=for-the-badge)]()
 [![Built With](https://img.shields.io/badge/⚡%20Built%20With-Docusaurus%20%2B%20FastAPI-00C896?style=for-the-badge)]()
 [![License](https://img.shields.io/badge/📜%20License-Educational-F5A623?style=for-the-badge)]()
@@ -212,7 +212,7 @@ Humanoid-Robotic-Book/
 
 **👉 Try it live right now:**
 
-> **[https://humaniod-robotic-book.vercel.app](https://humaniod-robotic-book.vercel.app)**
+> **[https://physical-ai-book-asadshabir.vercel.app](https://physical-ai-book-asadshabir.vercel.app)**
 
 Open the chatbot, ask it anything about humanoid robotics, and watch it pull context-aware answers straight from the book. 🤖
 
